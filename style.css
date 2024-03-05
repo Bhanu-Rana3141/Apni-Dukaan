@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: poppins;
 }
 
 /* Navbar */
@@ -12,9 +12,8 @@
     top: 0px;
     z-index: 100;
     width: 100%;
-    height: 90px;
+    height: 100px;
     background-color: #fff;
-    border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +21,7 @@
 
 .navbar img {
     position: relative;
-    right: 60px;
+    right: 120px;
 }
 
 a {
@@ -33,12 +32,18 @@ a {
 .nav-links {
     width: 60%;
     text-align: center;
+    position: relative;
+    left: 150px;
 }
 
 .nav-links a {
     margin-right: 60px;
     font-size: 16px;
     font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #6674CC
 }
 
 .navbar button {
@@ -74,18 +79,15 @@ a {
     font-size: 50px;
     line-height: 65px;
     position: relative;
-    bottom: 40px;
+    bottom: 30px;
+    left: 50px;
     font-weight: 700;
 }
 
 #dukaan-heading {
     background: linear-gradient(to bottom right, #ff0745, #000cff);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;;
-}
-
-.front-page img {
-    border-radius: 20px;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -103,7 +105,7 @@ h2 {
 }
 
 .categories {
-    height: 700px;
+    height: 350px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -130,6 +132,19 @@ h2 {
 
 }
 
+.categories-2 {
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.categories-2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
 /* footer */
 .footer {
     height: 400px;
@@ -141,7 +156,13 @@ h2 {
     justify-content: space-evenly;
 }
 
-.footer-logo, .quick-links, .shop, .connect {
+.footer-logo {
+    position: relative;
+    bottom: 100px;
+    right: 40px;
+}
+
+.quick-links, .shop, .connect {
     position: relative;
     bottom: 20px;
 }
@@ -181,4 +202,13 @@ ul {
     position: relative;
     bottom: 60px;
     margin-right: 5px;
+}
+
+.copyright {
+    height: 0px;
+    background-color: #000000;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    color: #FFFFFF;
 }
