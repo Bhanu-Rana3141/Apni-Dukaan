@@ -21,7 +21,7 @@
 
 .navbar img {
     position: relative;
-    right: 120px;
+    right: 90px;
 }
 
 a {
@@ -142,6 +142,10 @@ h2 {
 .categories-2 {
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+#grocery:hover {
+    
 }
 
 

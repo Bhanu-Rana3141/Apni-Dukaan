@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    background-color: #010101;
+    color: #FFFFFF;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-right: 50px;
+}
+
+.nav-links a:hover {
+    color: #6674CC;
+}
+
+.navbar img{
+    position: relative;
+    right: 260px;
+}
+
+button {
+    background-color: #6674CC;
+    padding: 8px 24px;
+    border-radius: 20px;
+    border: 1px solid #010101;
+    position: relative;
+    left: 200px;
+}
+
+button a {
+    font-weight: 700;
+}
