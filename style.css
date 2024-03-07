@@ -47,9 +47,8 @@ a {
 }
 
 .navbar button {
-    padding: 8px 15px;
+    padding: 3px 15px;
     font-size: 20px;
-    /* background-color: #6674CC; */
     background-color: #FFFFFF;
     border: 1px solid #6674CC;
     border-radius: 10px;
