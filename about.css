@@ -148,3 +148,8 @@ ul {
     bottom: 50px;
     color: #FFFFFF;
 }
+
+.card:hover {
+    scale: 1.1;
+    transition: .9s ease-in-out;
+}
