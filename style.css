@@ -37,13 +37,17 @@ a {
 }
 
 .nav-links a {
-    margin-right: 60px;
+    margin-right:50px;
     font-size: 16px;
     font-weight: 600;
+    padding: 10px 10px;
 }
 
 .nav-links a:hover {
-    color: #6674CC
+    background-color: #6674CC;  
+    color: #FFFFFF;
+    transition: .7s;
+    border-radius: 10px;
 }
 
 .navbar button {
