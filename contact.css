@@ -63,12 +63,6 @@ button a {
     border-radius: 20px;
 }
 
-.form-2 {
-    height: 500px;
-    width: 32%;
-    background-color:#6674CC ;
-}
-
 h2 {
     position: relative;
     top: 30px;
@@ -109,7 +103,6 @@ button a {
 .form-2 p {
     font-size: 24px;
     font-weight: 700;
-    
 }
 
 
@@ -180,4 +173,8 @@ ul {
     position: relative;
     bottom: 50px;
     color: #FFFFFF;
+}
+
+.logo {
+    mix-blend-mode: difference;
 }

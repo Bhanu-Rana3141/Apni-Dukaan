@@ -50,7 +50,7 @@ a {
 .nav-links a:hover {
     background-color: #6674CC;  
     color: #FFFFFF;
-    transition: .7s;
+    transition: .8s;
     border-radius: 10px;
 }
 
@@ -123,6 +123,7 @@ h3 {
 
 .text {
     width: 45%;
+    text-align: justify;
 }
 
 h4 {
@@ -160,16 +161,10 @@ h2 {
     border-radius: 15px;
 }
 
-.categories-name {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .category-links {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
 }
 
 .categories-2 {
@@ -186,7 +181,7 @@ h2 {
 
 .category:hover {
     scale: 1.1;
-    transition: 0.6s ease-in-out;
+    transition: 0.9s ease-in-out;
 }
 
 #grocery:hover{
@@ -212,6 +207,7 @@ h2 {
 #furniture:hover{
     content: url('Images/8_Furniture.jpg');   
 }
+
 
 /* footer */
 .footer {

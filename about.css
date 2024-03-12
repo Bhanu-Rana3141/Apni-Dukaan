@@ -153,3 +153,7 @@ ul {
     scale: 1.1;
     transition: .9s ease-in-out;
 }
+
+.logo {
+    mix-blend-mode:difference;
+}
