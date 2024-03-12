@@ -189,6 +189,29 @@ h2 {
     transition: 0.6s ease-in-out;
 }
 
+#grocery:hover{
+    content: url('Images/grocery2.jpg');   
+}
+
+#electronics:hover{
+    content: url('Images/electronics2.jpg');   
+}
+
+#shoes:hover{
+    content: url('Images/shoes2.jpg');   
+}
+
+#eyeglasses:hover{
+    content: url('Images/6_Eyeglasses.jpg');   
+}
+
+#homeAppliances:hover{
+    content: url('Images/homeAppliances2.jpg');   
+}
+
+#furniture:hover{
+    content: url('Images/8_Furniture.jpg');   
+}
 
 /* footer */
 .footer {
