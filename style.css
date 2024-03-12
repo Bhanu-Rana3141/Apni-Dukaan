@@ -70,6 +70,36 @@ a {
     font-size: 16px;   
 }
 
+@media (max-width: 907px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        left: 200px;
+    }
+
+    #img-logo {
+        position: relative;
+        left: 150px;
+        top: 180px;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: left;
+    }
+
+    .nav-links {
+        margin-top: 180px;
+    }
+
+    .navbar button {
+        display: block;
+        position: relative;
+        left: 150px;
+    }
+}
 
 /* front page */
 
@@ -97,6 +127,25 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+@media(max-width: 907px) {
+    .front-page {
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .heading {
+        display: none;
+    }
+
+    .image {
+        position: relative;
+        margin-bottom: 350px;
+        width: 100%;
+        position: relative;
+        left: 100px;
+    }
+}
 
 /* About us */
 .about-us {
@@ -130,6 +179,23 @@ h4 {
     font-size: 20px;
     margin-top: 30px;
     margin-bottom: 10px;
+}
+
+@media(max-width:907px) {
+    .about-us {
+       height: 800px;
+       background-color: #000000;
+    }
+
+    .about-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
 }
 
 /* Category */
