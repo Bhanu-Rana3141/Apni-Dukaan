@@ -48,6 +48,12 @@ button a {
     font-weight: 700;
 }
 
+@media(max-width:907px) {
+    .navbar {
+        display: none;
+    }
+}
+
 .contact {
     margin-top: 40px;
     display: flex;
@@ -103,6 +109,34 @@ button a {
 .form-2 p {
     font-size: 24px;
     font-weight: 700;
+}
+
+@media(max-width:907px) {
+    .form {
+        position: relative;
+        top: 100px;
+        width: 400px;  
+        height: 600px; 
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #msg  {
+        display: none;
+    }
+    
+    button {
+       background-color: #181A1B;
+    }
+
+    button a {
+        position: relative;
+        right: 120px;
+    }
+
+
 }
 
 
@@ -177,4 +211,14 @@ ul {
 
 .logo {
     mix-blend-mode: difference;
+}
+
+@media(max-width:907px) {
+    .footer {
+        display: none;
+    }
+
+    .copyright {
+        display: none;
+    }
 }
