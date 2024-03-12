@@ -101,6 +101,7 @@ a {
     }
 }
 
+
 /* front page */
 
 .front-page {
@@ -140,12 +141,12 @@ a {
 
     .image {
         position: relative;
-        margin-bottom: 350px;
+        margin-bottom: 200px;
         width: 100%;
         position: relative;
-        left: 100px;
     }
 }
+
 
 /* About us */
 .about-us {
@@ -183,20 +184,21 @@ h4 {
 
 @media(max-width:907px) {
     .about-us {
-       height: 800px;
+       height: 700px;
        background-color: #000000;
     }
 
     .about-div {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .img {
-        margin-top: 30px;
-        margin-left: 100px;
+        display: none;
     }
 }
+
 
 /* Category */
 
@@ -274,6 +276,19 @@ h2 {
     content: url('Images/8_Furniture.jpg');   
 }
 
+@media(max-width:768px) {
+    .categories {
+        height: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .categories-2 {
+        height: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 /* footer */
 .footer {
@@ -341,4 +356,10 @@ ul {
     position: relative;
     bottom: 50px;
     color: #FFFFFF;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        width: 100%;
+    }
 }
