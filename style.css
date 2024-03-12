@@ -5,6 +5,10 @@
     font-family: poppins;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Navbar */
 
 .navbar {
@@ -93,6 +97,39 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+
+/* About us */
+.about-us {
+    margin-top: 100px;
+    height: 450px;
+    background-color: #000000;
+}
+
+h3 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+}
+
+.about-div {
+    margin-top: 60px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text {
+    width: 45%;
+}
+
+h4 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
 
 /* Category */
 
