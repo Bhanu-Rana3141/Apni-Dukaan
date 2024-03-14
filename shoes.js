@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
 
     hamburgerIcon.addEventListener("click", function () {
-        navLinks.classList.toggle("active"); // Toggle the 'active' class on click
+        // Toggle the 'active' class on the .nav-links
+        navLinks.classList.toggle("active");
     });
 });
