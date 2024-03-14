@@ -13,9 +13,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
     background-color: #fff;
-    padding: 0px 20px;
+    padding: 15px 20px;
 }
 
 a {
@@ -74,5 +73,65 @@ a {
 
     .hamburger-icon{
         display: block;
+    }
+}
+
+
+/* MAIN SECTION */
+
+main {
+    margin-top: 80px;
+}
+
+main img {
+    display: block;
+    width: 100%;
+    max-height: 100vh; /* Set a maximum height relative to the viewport height */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+
+/* redtape */
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(to bottom right, #ff0745, #000cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.red-tape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.img {
+    width: calc(25% - 10px); /* 25% width for each image with spacing */
+    margin-bottom: 20px; /* Adjust spacing between rows */
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.img p img {
+    width: 20px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block;
+}
+
+.img p {
+    text-align: center;
+}
+
+
+@media(max-width: 768px) {
+    .img {
+        width: calc(50% - 10px); /* 50% width for each image on smaller screens */
     }
 }
