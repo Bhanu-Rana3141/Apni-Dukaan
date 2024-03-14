@@ -5,10 +5,6 @@
     font-family: poppins;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 @media(max-width: 907px) {
     body {
         position: relative;
