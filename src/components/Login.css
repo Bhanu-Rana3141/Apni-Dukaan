@@ -1,11 +1,12 @@
 .body {
-    margin: 80px 0px 200px 0px;
+    margin: 120px 0px 120px 0px;
     text-align: center;
     overflow: hidden;
 }
 
 .heading {
     margin-bottom: 40px;
+    color: #494949;
 }
 
 .heading h3 {
@@ -21,9 +22,11 @@ span {
     margin-left: 30px;
 }
 
-input {
+.body input {
     width: 40%;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid;
 }
 
 .button button {

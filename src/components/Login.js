@@ -6,17 +6,21 @@ export default function Login() {
     <>
         <div className="body">
             <div className="heading">
-                <h3>Login</h3>
+                <h3>Sign in to Apni Dukaan</h3>
             </div>
 
             <div className="email">
-                <span>Email</span>
-                <input type="email" placeholder='E-mail' />
+                <label htmlFor="e-m">
+                    <span>Email</span>
+                    <input type="email" placeholder='E-mail' id='e-m'/>
+                </label>
             </div>
 
             <div className="password">
-                <span>Password</span>
-                <input type="password" placeholder='Password' />
+                <label htmlFor="pass">
+                    <span>Password</span>
+                    <input type="password" placeholder='Password' id='pass'/>
+                </label>
             </div>
 
             <div className="button">

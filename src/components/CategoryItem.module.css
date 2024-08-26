@@ -1,0 +1,38 @@
+.categoryItem {
+    max-width: 22%; 
+    margin-bottom: 20px;
+}
+
+.categoryImage  {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.categoryImage:hover {
+    filter: brightness(80%);
+}
+
+.categoryName {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .categoryItem {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .categoryItem {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 350px) {
+    .categoryItem {
+        max-width: 70%;
+    }
+}

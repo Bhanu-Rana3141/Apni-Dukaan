@@ -1,0 +1,13 @@
+.rightSection {
+    width: 40%;
+}
+
+.rightSection img {
+    width: 100%;
+}
+
+@media(max-width: 870px) {
+    .rightSection {
+        display: none;
+    }
+}

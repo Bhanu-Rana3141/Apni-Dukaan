@@ -1,0 +1,19 @@
+.getStartedButton button {
+    background-color: #0F172A;
+    color: #fff;
+    border: 1px solid #0F172A;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    font-weight: 700;
+}
+
+.getStartedButton button:hover {
+    cursor: pointer;
+}
+
+@media(max-width: 390px) {
+    .getStartedButton button {
+        width: 90vw;
+    }
+}

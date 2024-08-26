@@ -1,0 +1,9 @@
+.cartEmptyImg {
+    margin: 170px 0px 200px;
+    text-align: center;
+}
+
+.cartEmptyImg p {
+    font-weight: 700;
+    font-size: 1.2rem;
+}

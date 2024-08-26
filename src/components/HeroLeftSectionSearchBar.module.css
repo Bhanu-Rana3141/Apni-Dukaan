@@ -1,0 +1,24 @@
+.searchIcon {
+    height: 20px;
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+
+.searchBar {
+    padding-left: 40px;
+    outline: none;
+}
+
+.inputBlock input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+@media(max-width: 390px) {
+    .inputBlock {
+        display: none;
+    }
+}

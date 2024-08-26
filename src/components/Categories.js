@@ -1,137 +1,43 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Categories.css'
+import styles from './Categories.module.css'
+import CategoryItem from './CategoryItem';
 
 export default function Categories() {
+
+    const categories = [
+        { id: '1', name: 'Beverages', image: 'Images/Beverages.png', path: '/beverages' },
+        { id: '2', name: 'Bakery', image: 'Images/Bakery.jpeg', path: '/bakery' },
+        { id: '3', name: 'Branded food & snacks', image: 'Images/Branded food & snacks.png', path: '/branded-food-snacks' },
+        { id: '4', name: 'Stationary', image: 'Images/stationary.jfif', path: '/stationary' },
+        { id: '5', name: 'Dairy Products', image: 'Images/Dairy.jpeg', path: '/dairy' },
+        { id: '6', name: 'FoodGrains', image: 'Images/FoodGrains & masalas.png', path: '/foodgrains' },
+        { id: '7', name: 'Dry Fruits', image: 'Images/dry fruits.jfif', path: '/dry-fruits' },
+        { id: '8', name: 'Chocolates & toffees', image: 'Images/Chocolates.jpg', path: '/chocolates' },
+        { id: '9', name: 'Vegetables', image: 'Images/vegetables.jpg', path: '/vegetables' },
+        { id: '10', name: 'Tooth Pastes & brushes', image: 'Images/toothBrushes.avif', path: '/tooth-brushes' },
+        { id: '11', name: 'Pooja items', image: 'Images/Pooja items.webp', path: '/pooja-items' },
+        { id: '12', name: 'Slippers', image: 'Images/slippers.jfif', path: '/slippers' },
+        { id: '13', name: 'Mosquitos Repellents', image: 'Images/mosquitos oils and coils.jfif', path: '/mosquitos-repellents' },
+        { id: '14', name: 'Cleaning & households', image: 'Images/cleaning & households.png', path: '/cleaning-households' },
+        { id: '15', name: 'Eggs', image: 'Images/eggs.avif', path: '/eggs' },
+        { id: '16', name: 'Skin care', image: 'Images/skin care.jfif', path: '/skin-care' },
+        { id: '17', name: 'Hair Care', image: 'Images/hair care.webp', path: '/hair-care' },
+        { id: '18', name: 'Baby Care', image: 'Images/Baby Care.webp', path: '/baby-care' },
+        { id: '19', name: 'Perfumes', image: 'Images/perfumes.jpeg', path: '/perfumes' },
+        { id: '20', name: 'LED Bulbs', image: 'Images/led bulbs.webp', path: '/led-bulbs' },
+      ];
+
   return (
     <>
-        <h2>Shop by category</h2>
+        <h2 className={styles.title}>Shop by category</h2>
 
-        <div className="categories">
-
-            <div className="items">
-                <Link to="/beverages">
-                    <img src="Images/Beverages.png" alt="beverages" />
-                    <p>Beverages</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/Bakery.jpeg" alt="bakery" />
-                    <p>Bakery</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/Branded food & snacks.png" alt="branded foods" />
-                    <p>Branded food & snacks</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/stationary.jfif" alt="stationary" />
-                    <p>Stationary</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/Dairy.jpeg" alt="diary" />
-                    <p>Dairy Products</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/FoodGrains & masalas.png" alt="food grains" />
-                    <p>FoodGrains</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/dry fruits.jfif" alt="dry fruits" />
-                    <p>Dry Fruits</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/Chocolates.jpg" alt="chocolates" />
-                    <p>Chocolates & toffees</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/vegetables.jpg" alt="vegetables" />
-                    <p>Vegetables</p>
-                </Link>
-            </div>
-            
-            <div className="items">
-                <Link to="">
-                    <img src="\Images\toothBrushes.avif" alt="Tooth Paste & brushes" />
-                    <p>Tooth Pastes & brushes</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/Pooja items.webp" alt="pooja items" />
-                    <p>Pooja items</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/slippers.jfif" alt="slippers" />
-                    <p>Slippers</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/mosquitos oils and coils.jfif" alt="mosquitos oils" />
-                    <p>Mosquitos Repellents</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/cleaning & households.png" alt="cleaning and households" />
-                    <p>Cleaning & households</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/eggs.avif" alt="eggs" />
-                    <p>Eggs</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/skin care.jfif" alt="skin care" />
-                    <p>Skin care</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images\hair care.webp" alt="Hair Care" />
-                    <p>Hair Care</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/Baby Care.webp" alt="cleaning and households" />
-                    <p>Baby Care</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/perfumes.jpeg" alt="perfumes" />
-                    <p>Perfumes</p>
-                </Link>
-            </div>
-            <div className="items">
-                <Link to="">
-                    <img src="Images/led bulbs.webp" alt="LED Bulbs" />
-                    <p>LED Bulbs</p>
-                </Link>
-            </div>
-            
+        <div className={styles.categories}>
+            {categories.map(category => (
+                <CategoryItem key={category.id} category={category} />
+            ))}
         </div>
+
     </>
   )
 }

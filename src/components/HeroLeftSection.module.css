@@ -1,0 +1,31 @@
+.leftSection {
+    width: 40%;
+}
+
+.leftSection h1 {
+    color: #0F172A;
+    font-size: 3.7rem;
+}
+
+.leftSection p {
+    position: relative;
+    bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.inputClass {
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width: 870px) {
+    .leftSection {
+        width: 100%;
+        text-align: center;
+    }
+    .inputClass {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
