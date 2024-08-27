@@ -1,0 +1,12 @@
+.password {
+    position: relative;
+    right: 15px;
+}
+
+.forgotPassword {
+    color: #6674cc;
+    cursor: pointer;
+    position: relative;
+    right: 13%;
+    text-decoration: underline;
+}

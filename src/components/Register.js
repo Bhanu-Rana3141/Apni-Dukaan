@@ -1,40 +1,22 @@
 import React from 'react'
-import './Register.css'
+import stylesA from './Contact.module.css'
+import stylesB from './Login.module.css'
+import ContactHeading from './ContactHeading';
+import ContactInputField from './ContactInputField';
+import ContactSubmitButton from './ContactSubmitButton';
 
 export default function Register() {
   return (
     <>
-        <div className="body">
-            <div className="heading">
-                <h3>Register</h3>
+        <div className={stylesA.contactBody}>
+            <ContactHeading heading="Register"/>
+            <ContactInputField label="Name" id="name" type="name" placeholder="Enter name"/>
+            <ContactInputField label="Email" id="email" type="email" placeholder="Enter email Id"/>
+            <ContactInputField label="Mobile" id="phoneNo" type="phoneNo" placeholder="Enter number"/>
+            <div className={stylesB.password}>
+                <ContactInputField label="Password" id="password" type="password" placeholder="create password"/>
             </div>
-            <div className="name">
-                <label htmlFor="n">
-                    <span>Name</span>
-                    <input type="text" placeholder='Enter name' id='n'/>
-                </label>
-            </div>
-            <div className="email-id">
-                <label htmlFor="e-m">
-                    <span>Email</span>
-                    <input type="email" name="" id="e-m" placeholder='Enter Email'/>
-                </label>
-            </div>
-            <div className="pass">
-                <label htmlFor="pass">
-                    <span>Password</span>
-                    <input type="password" name="" id="pass" placeholder='Create password'/>
-                </label>
-            </div>
-            <div className="phone-no">
-                <label htmlFor="p-no">
-                    <span>Phone No</span>
-                    <input type="number" name="" id="p-no" placeholder='Enter phone-no'/>
-                </label>
-            </div>
-            <div className="button">
-                <button>Register</button>
-            </div>
+            <ContactSubmitButton clickHandler="Register"/>
         </div>
     </>
   )

@@ -1,41 +1,18 @@
-import React from 'react'
-import './Contact.css'
+import React from 'react';
+import styles from './Contact.module.css'
+import ContactHeading from './ContactHeading';
+import ContactInputField from './ContactInputField';
+import ContactTextArea from './ContactTextArea';
+import ContactSubmitButton from './ContactSubmitButton';
 
 export default function Contact() {
   return (
-    <>
-        <div className="body">
-
-        <div className="heading">
-                <h3>Send us a message</h3>
-            </div>
-
-            <div className="name">
-                <label htmlFor="n">
-                    <span>Name</span>
-                    <input type="text" placeholder='Name' id='n'/>
-                </label>
-            </div>
-
-            <div className="email">
-                <label htmlFor="e-m">
-                    <span>Email</span>
-                    <input type="email" className='contact-email' placeholder='E-mail' id='e-m'/>
-                </label>
-            </div>
-
-            <div className="textarea">
-                <label htmlFor="textArea">
-                    <span id='textarea-msg'>Message</span>
-                    <textarea name="" id="textArea" placeholder='write a message.'></textarea>
-                </label>
-            </div>
-
-            <div className="contact-submit-button">
-                <button>Submit</button>
-            </div>
-        </div>
-
-    </>
-  )
+    <div className={styles.contactBody}>
+      <ContactHeading heading="Send us a message"/>
+      <ContactInputField label="Name" id='name' type="text" placeholder="Name" />
+      <ContactInputField label="Email" id='email' type="email" placeholder="E-mail" />
+      <ContactTextArea label="Message" id='textArea' placeholder="Write a message." />
+      <ContactSubmitButton clickHandler="Submit"/>
+    </div>
+  );
 }
