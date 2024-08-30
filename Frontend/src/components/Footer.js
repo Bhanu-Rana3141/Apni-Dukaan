@@ -10,7 +10,6 @@ export default function Footer() {
 
     const quickLinks = [
         { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
         { name: 'Categories', path: '/categories' },
         { name: 'Contact', path: '/contact' },
         { name: 'Login', path: '/login' },
