@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter , Routes, Route, Router } from 'react-router-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import useScrollToTop from './components/useScrollToTop';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
@@ -23,7 +23,7 @@ function App() {
         <Route path='/categories' element={<Categories/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
-        <Route path='/signup' element={<Register/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
       </Routes>
       <Footer/>

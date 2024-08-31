@@ -8,7 +8,7 @@ const NavbarLinks = ({ isMobileMenuOpen }) => {
     { name: 'Categories', path: '/categories' },
     { name: 'Contact', path: '/contact' },
     { name: 'Login', path: '/login' },
-    { name: 'Register', path: '/signup' },
+    { name: 'Register', path: '/register' },
     { name: 'Cart', path: '/cart' }
   ];
 
