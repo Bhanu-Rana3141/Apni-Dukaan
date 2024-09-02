@@ -1,15 +1,19 @@
 const express = require('express');
-const cors = require('cors');
-const categoriesRoutes = require('./routes/categories');
-
 const app = express();
 const PORT = 5000;
 
+const cors = require('cors');
+const path = require('path')
+const categoriesRoutes = require('./routes/categories');
+const productsRouter = require('./routes/products'); 
+
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(cors());
 app.use(express.json());
 
 // Routes
 app.use('/api/categories', categoriesRoutes);
+app.use('/api/products', productsRouter);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
