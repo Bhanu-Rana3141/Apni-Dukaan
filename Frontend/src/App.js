@@ -12,7 +12,7 @@ import HomePage from './components/HomePage';
 import Footer from './components/Footer';
 import Products from './components/Products';
 
-function App() {
+function App() { 
   
   useScrollToTop();
 
@@ -23,8 +23,6 @@ function App() {
         <Route path='/' element={<HomePage/>}></Route>
         <Route path='/categories' element={<Categories/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
         <Route path="/:categoryName" element={<Products />} />
         <Route path="/category/:categoryName" element={<Products />} />

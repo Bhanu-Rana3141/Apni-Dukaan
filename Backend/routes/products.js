@@ -9,10 +9,13 @@ router.get('/category/:categoryName', (req, res) => {
     res.json(filteredProducts);
 });
 
-router.get('/subcategory/:subcategoryName', (req, res) => {
+router.get('/category/:categoryName/subcategory/:subcategoryName', (req, res) => {
     const { subcategoryName } = req.params;
-    const lowerCaseCategoryName = subcategoryName.toLowerCase().trim();
-    const filteredProducts = products.filter(product => product.subcategory.toLowerCase().trim() === lowerCaseCategoryName);
+    const lowerCaseCategoryName = categoryName.toLowerCase().trim();
+    const lowerCaseSubcategoryName = subcategoryName.toLowerCase().trim();
+    const filteredProducts = products.filter(product => 
+        product.category.toLowerCase().trim() === lowerCaseCategoryName && 
+        product.subcategory.toLowerCase().trim() === lowerCaseCategoryName);
     res.json(filteredProducts);
 });
   
