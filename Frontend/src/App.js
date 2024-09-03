@@ -10,7 +10,7 @@ import Register from './components/Register';
 import Cart from './components/Cart';
 import HomePage from './components/HomePage';
 import Footer from './components/Footer';
-// import Products from './components/Products';
+import Products from './components/Products';
 
 function App() {
   
@@ -26,7 +26,8 @@ function App() {
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
-        <Route path='/beverages' element={<Beverages/>}></Route>
+        <Route path="/:categoryName" element={<Products />} />
+        <Route path="/category/:categoryName" element={<Products />} />
       </Routes>
       <Footer/>
     </>

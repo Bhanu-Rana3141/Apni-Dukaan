@@ -1,0 +1,24 @@
+.sidebarContainer {
+    width: 28%;
+    margin-top: 5px;
+    background-color: #fff;
+}
+  
+.sidebarList {
+    list-style-type: none;
+}
+  
+.sidebarItem {
+    padding: 20px;
+    margin-bottom: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #010101;
+    font-size: 14px;
+}
+
+.sidebarItem:hover {
+    background-color: #318616;
+    color: #fff;
+}
+  

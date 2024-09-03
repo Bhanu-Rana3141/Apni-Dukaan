@@ -6,6 +6,7 @@ const cors = require('cors');
 const path = require('path')
 const categoriesRoutes = require('./routes/categories');
 const productsRouter = require('./routes/products'); 
+const subcategoriesRouter = require('./routes/subcategories');
 
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(cors());
@@ -14,6 +15,7 @@ app.use(express.json());
 // Routes
 app.use('/api/categories', categoriesRoutes);
 app.use('/api/products', productsRouter);
+app.use('/api/subcategories', subcategoriesRouter);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
