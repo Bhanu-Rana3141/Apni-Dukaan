@@ -5,8 +5,6 @@ import useScrollToTop from './components/useScrollToTop';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
 import Contact from './components/Contact';
-import Login from './components/Login';
-import Register from './components/Register';
 import Cart from './components/Cart';
 import HomePage from './components/HomePage';
 import Footer from './components/Footer';

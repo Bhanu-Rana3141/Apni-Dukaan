@@ -2,41 +2,40 @@ import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Modal.module.css";
 
-const Modal = ({ closeModal, modalType }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    password: "",
-  });
+const Modal = ({ closeModal, modalType, setIsLoggedIn }) => {
+    const [formData, setFormData] = useState({
+      name: "",
+      phone: "",
+      email: "",
+      password: "",
+    });
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
+    const handleChange = (e) => {
+      const { id, value } = e.target;
+      setFormData({ ...formData, [id]: value });
+    };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleSubmit = async (e) => {
+      e.preventDefault();
 
     try {
-      const url =
-        modalType === "login" ? "/api/auth/login" : "/api/auth/register";
-      const response = await axios.post(
-        `http://localhost:5000${url}`,
-        formData
-      );
+      const url = modalType === "login" ? "/api/auth/login" : "/api/auth/register";
+      const response = await axios.post(`http://localhost:5000${url}`,formData);
+
+      if (modalType === "login") {
+        localStorage.setItem('user', JSON.stringify(response.data.user));
+        setIsLoggedIn(true);
+      }
+
       alert(response.data.message);
-      closeModal(); // Close the modal on successful submission
+      closeModal();
     } catch (error) {
       alert(error.response.data.message);
     }
   };
 
   return (
-    <div
-      className={`${styles.modalOverlay} ${styles.active}`}
-      onClick={closeModal}
-    >
+    <div className={`${styles.modalOverlay} ${styles.active}`} onClick={closeModal}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeBtn} onClick={closeModal}>
           &times;

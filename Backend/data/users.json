@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "bhanu",
+    "email": "hr@cvbhj",
+    "password": "123",
+    "phone": "86858"
+  },
+
+  {
+    "id": 2,
+    "name": "Thakur Bhanu Partap Singh Rana",
+    "email": "bps123@gmail.com",
+    "password": "111",
+    "phone": "123456789"
+  }
+]
