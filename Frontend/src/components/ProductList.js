@@ -11,7 +11,7 @@ export default function ProductList({ products }) {
           <p>{product.quantity}</p>
           <div className={styles.itemFooter}>
             <div className={styles.rupeeSymbolAndPrice}>
-              <img style={{height : '16px', width:'auto'} } src="Images\rupeeSymbol.png" alt="rupee symbol"/>
+              <img style={{height : '16px', width:'auto'} } src="/Images/rupeeSymbol.png" alt="rupee symbol"/>
               <p>{product.price}</p>
             </div>
             <button className={styles.addToCart}>Add</button>

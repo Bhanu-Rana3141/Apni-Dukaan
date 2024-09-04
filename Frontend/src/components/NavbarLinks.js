@@ -4,11 +4,16 @@ import styles from './NavbarLinks.module.css';
 
 const NavbarLinks = ({ isMobileMenuOpen, openModal, isLoggedIn, onLogout }) => {
 
+  const user = JSON.parse(localStorage.getItem('user'));
+  const userName = user ? user.name : '';
+
   const navbarLinks = isLoggedIn
-    ? [
+    ? 
+      [
         { name: 'Home', path: '/' },
         { name: 'Categories', path: '/categories' },
         { name: 'Contact', path: '/contact' },
+        { name: `${userName}`, path: '#', isText: true }, 
         { name: 'Sign Out', path: '/signout', isButton: true, onClick: onLogout },
         { name: 'Cart', path: '/cart'}
       ]
@@ -29,6 +34,8 @@ const NavbarLinks = ({ isMobileMenuOpen, openModal, isLoggedIn, onLogout }) => {
             <button className={styles.links} onClick={link.onClick}>
               {link.name}
             </button>
+          ) : link.isText ? (
+              <span className={styles.userName}>{link.name}</span>
           ) : (
             <Link to={link.path} className={styles.links}>{link.name}</Link>
           )}
@@ -36,7 +43,7 @@ const NavbarLinks = ({ isMobileMenuOpen, openModal, isLoggedIn, onLogout }) => {
       ))}
       <li>
         <Link to='/cart'>
-          <img className={styles.cartIcon} src="Images/cart.png" alt="Shopping Cart" />
+          <img className={styles.cartIcon} src="/Images/cart.png" alt="Shopping Cart" />
         </Link>
       </li>
     </ul>

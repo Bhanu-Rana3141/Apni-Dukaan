@@ -17,6 +17,13 @@
     cursor: pointer;
 }
 
+.userName {
+    display: inline-block;
+    color: #555555;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
 .cartIcon {
     height: 28px;
     position: relative;

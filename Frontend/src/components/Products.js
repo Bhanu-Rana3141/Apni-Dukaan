@@ -7,34 +7,37 @@ import { useParams } from 'react-router';
 
 export default function Products() {
 
-  const { categoryName} = useParams();
+  const { categoryName } = useParams();
 
   const [products, setProducts] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
-  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState('All');
+
+  // Fetching all subcategories related to that category on the left side bar
+  useEffect(() => {
+    const fetchSubcategories = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/api/subcategories/category/${categoryName}`);
+        setSubcategories(response.data); 
+      } catch (error) {
+        console.error('Error fetching subcategories:', error);
+      }
+    };
+
+    fetchSubcategories();
+  }, [categoryName]);
 
   useEffect(() => {
-
     const fetchProducts = async () => {
       try {
-        const endpoint = selectedSubcategory 
-          ? `http://localhost:5000/api/products/subcategory/${selectedSubcategory}` 
-          : `http://localhost:5000/api/products/category/${categoryName}`;
+        const endpoint = selectedSubcategory === 'All'
+          ? `http://localhost:5000/api/products/category/${categoryName}`
+          : `http://localhost:5000/api/products/category/${categoryName}/subcategory/${selectedSubcategory}`;
         const response = await axios.get(endpoint);
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
       }
-    };
-
-    const fetchSubcategories = async () => {
-        try {
-          const response = await axios.get(`http://localhost:5000/api/subcategories/category/${categoryName}`);
-          console.log(response.data)
-          setSubcategories(response.data);
-        } catch (error) {
-          console.error('Error fetching subcategories:', error);
-        }
     };
 
     fetchProducts();
@@ -44,22 +47,9 @@ export default function Products() {
     setSelectedSubcategory(subcategory);
   };
 
-  useEffect(() => {
-    const fetchSubcategories = async () => {
-      try {
-        const response = await axios.get(`http://localhost:5000/api/subcategories/category/${categoryName}`);
-        setSubcategories(response.data);
-      } catch (error) {
-        console.error('Error fetching subcategories:', error);
-      }
-    };
-
-    fetchSubcategories();
-  }, [categoryName]);
-
   return (
     <div className={styles.productsContainer}>
-      <SideBar subcategories={subcategories} onSubcategoryClick={handleSubcategoryClick} />
+      <SideBar subcategories={subcategories} onSubcategoryClick={handleSubcategoryClick} selectedSubcategory={selectedSubcategory}/>
       <ProductList products={products} />
     </div>
   );

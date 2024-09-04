@@ -6,7 +6,7 @@ export default function FooterLogo() {
   return (
     <>
         <div className={styles.footerLogo}>
-            <Link to="/"><img src="Images/footerlogo.png" alt="logo" /></Link>
+            <Link to="/"><img src="/Images/footerlogo.png" alt="logo" /></Link>
         </div>
     </>
   )

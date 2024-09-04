@@ -22,7 +22,6 @@ function App() {
         <Route path='/categories' element={<Categories/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
-        <Route path="/:categoryName" element={<Products />} />
         <Route path="/category/:categoryName" element={<Products />} />
       </Routes>
       <Footer/>

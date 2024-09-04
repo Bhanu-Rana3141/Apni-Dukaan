@@ -240,7 +240,7 @@ const products = [
         image: 'products/beverages/Soft drinks/Pepsi2L.jpg',
     },
     {
-        productName: 'Kinley Packaged Water',
+        productName: 'Kinley Packaged Water (1000 ml)',
         price: "20",
         quantity: '1 l ',
         category: 'beverages',
@@ -248,7 +248,7 @@ const products = [
         image: 'products/beverages/Soda & water/kinley-1L.avif',
     },
     {
-        productName: 'Kinley club soda',
+        productName: 'Kinley club soda (750 ml)',
         price: "20",
         quantity: '750 ml ',
         category: 'beverages',
@@ -256,7 +256,7 @@ const products = [
         image: 'products/beverages/Soda & water/Kinley club soda 750ml.jpg',
     },
     {
-        productName: 'Bisleri club soda',
+        productName: 'Bisleri club soda (750 ml)',
         price: "20",
         quantity: '750 ml ',
         category: 'beverages',

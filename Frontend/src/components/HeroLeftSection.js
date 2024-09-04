@@ -3,7 +3,9 @@ import styles from './HeroLeftSection.module.css'
 import HeroLeftSectionSearchBar from './HeroLeftSectionSearchBar'
 import HeroLeftSectionButton from './HeroLeftSectionButton'
 
+
 export default function HeroLeftSection() {
+
   return (
     <>
         <div className={styles.leftSection}>

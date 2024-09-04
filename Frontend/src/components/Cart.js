@@ -5,7 +5,7 @@ export default function Cart() {
   return (
     <>
         <div className={styles.cart}>
-            <img src="Images\cartIsEmpty.png" alt="cart is empty" />
+            <img src="/Images/cartIsEmpty.png" alt="cart is empty" />
             <p>OOPS ! Your cart is empty.</p>
         </div>
     </>

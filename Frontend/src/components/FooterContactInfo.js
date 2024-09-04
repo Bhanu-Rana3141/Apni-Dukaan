@@ -8,13 +8,13 @@ export default function FooterContactInfo() {
         <div className={styles.getInTouchSection}>
             <h4>Get in Touch</h4>
             <Link to="https://github.com/Bhanu-Rana3141?tab=overview&from=2024-08-01&to=2024-08-25">
-                <img className={styles.connectLogo} src="Images/Github_logo.jpg" alt="GitHub" />
+                <img className={styles.connectLogo} src="/Images/Github_logo.jpg" alt="GitHub" />
             </Link>
             <Link to="https://www.linkedin.com/in/bhanu-partap-singh-rana-875957272/">
-                <img className={styles.connectLogo} src="Images/Linkedin_logo.png" alt="LinkedIn" />
+                <img className={styles.connectLogo} src="/Images/Linkedin_logo.png" alt="LinkedIn" />
             </Link>
             <Link to="https://www.instagram.com/bhanu.rana3141/">
-                <img className={styles.connectLogo} src="Images/InstagramLogo.png" alt="Instagram" />
+                <img className={styles.connectLogo} src="/Images/InstagramLogo.png" alt="Instagram" />
             </Link>
         </div>
     </>
