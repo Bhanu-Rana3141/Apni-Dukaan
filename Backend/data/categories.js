@@ -3,13 +3,13 @@ const categories = [
         name: "Beverages",
         image: "categories/Beverages.png",
     },
+    {
+        name: "Snacks",
+        image: "categories/Branded food & snacks.png",
+    },
     { 
         name: "Bakery", 
         image: "categories/Bakery.jpeg", 
-    },
-    {
-        name: "Branded food & snacks",
-        image: "categories/Branded food & snacks.png",
     },
     {
         name: "Stationary",

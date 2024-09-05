@@ -8,6 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 const categoriesRoutes = require('./routes/categories');
 const productsRouter = require('./routes/products'); 
 const subcategoriesRouter = require('./routes/subcategories');
+const contactRoutes = require('./routes/contacts');
 
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(cors());
@@ -18,6 +19,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/categories', categoriesRoutes);
 app.use('/api/products', productsRouter);
 app.use('/api/subcategories', subcategoriesRouter);
+app.use('/api/contact', contactRoutes);
+
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
