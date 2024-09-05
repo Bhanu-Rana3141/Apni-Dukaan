@@ -29,13 +29,11 @@ const NavbarLinks = ({ isMobileMenuOpen, openModal, isLoggedIn, onLogout }) => {
   return (
     <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.active : ''}`}>
       {navbarLinks.map((link) => (
-        <li key={link.path}>
+        <li key={link.name}>
           {link.isButton ? (
             <button className={styles.links} onClick={link.onClick}>
               {link.name}
             </button>
-          ) : link.isText ? (
-              <span className={styles.userName}>{link.name}</span>
           ) : (
             <Link to={link.path} className={styles.links}>{link.name}</Link>
           )}

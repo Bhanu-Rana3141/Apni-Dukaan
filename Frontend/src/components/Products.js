@@ -13,7 +13,7 @@ export default function Products() {
   const [subcategories, setSubcategories] = useState([]);
   const [selectedSubcategory, setSelectedSubcategory] = useState('All');
 
-  // Fetching all subcategories related to that category on the left side bar
+  // Fetching all subcategories related to category, on the left side bar
   useEffect(() => {
     const fetchSubcategories = async () => {
       try {

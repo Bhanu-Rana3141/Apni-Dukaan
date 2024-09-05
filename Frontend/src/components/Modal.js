@@ -36,11 +36,11 @@ const Modal = ({ closeModal, modalType, setIsLoggedIn }) => {
 
   return (
     <div className={`${styles.modalOverlay} ${styles.active}`} onClick={closeModal}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeBtn} onClick={closeModal}>
-          &times;
-        </button>
+
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>  
+        <button className={styles.closeBtn} onClick={closeModal}>&times;</button>
         <h2>{modalType === "login" ? "Login" : "Register"}</h2>
+
         <form onSubmit={handleSubmit}>
           {modalType === "register" && (
             <>
@@ -51,6 +51,7 @@ const Modal = ({ closeModal, modalType, setIsLoggedIn }) => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
+                required
               />
 
               <label htmlFor="phone">Enter your phone number</label>
@@ -60,6 +61,7 @@ const Modal = ({ closeModal, modalType, setIsLoggedIn }) => {
                 placeholder="Phone Number"
                 value={formData.phone}
                 onChange={handleChange}
+                required
               />
             </>
           )}
@@ -71,6 +73,7 @@ const Modal = ({ closeModal, modalType, setIsLoggedIn }) => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor="password">Enter password</label>
@@ -80,13 +83,16 @@ const Modal = ({ closeModal, modalType, setIsLoggedIn }) => {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
+            required
           />
 
           <button type="submit">
             {modalType === "login" ? "Login" : "Register"}
           </button>
         </form>
+
       </div>
+      
     </div>
   );
 };
