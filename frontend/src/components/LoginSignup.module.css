@@ -1,42 +1,27 @@
 .loginSignupForm {
     background: #f2f4f7;
-    width: 100%;
     height: 100vh;
+    width: 100%;
     overflow-y: hidden;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-.leftPart {
-    width: 40%;
-    margin-bottom: 100px;
-}
-
-.leftPart h1 {
-    color: #0866ff;
-    font-size: 50px;
-}
-
-.leftPart p {
-    font-size: 20px;
-    color: #1C1E21;
-}
-
-.rightPart {
+.form {
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 396px;
+    width: 24rem;
     height: auto;
     gap: 20px;
     border-radius: 8px;
     padding: 20px 0px 28px;
 }
 
-.rightPart input{
+.form input{
     width: 80%;
     padding: 14px 16px;
     border-radius: 6px;
@@ -44,7 +29,19 @@
     outline: none;
 }
 
-.rightPart button {
+.form input:hover {
+    border: 1px solid #0866ff;
+}
+
+.passwordWrapper {
+    width: 100%;
+}
+
+.passwordWrapper input {
+    margin-left: 23px;
+}
+
+.form button {
     outline: none;
 }
 
@@ -53,7 +50,7 @@
     padding: 14px 16px;
     background-color: #0866ff;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 700;
     border: none;
     border-radius: 6px;
@@ -67,35 +64,15 @@
 .dontHaveAccountPara {
     position: relative;
     top: 20px;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
  
-.createAccount {
-    background-color: #42b72a;
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    font-weight: 700;
-    padding: 16px;
-}
-
-.createAccount:hover {
-    background-color: #42b72adc;
+.links {
+    color: #0866ff;
     cursor: pointer;
 }
 
-.newAccountHeading {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-@media(max-width: 713px) {
-    .loginSignupForm {
-        flex-direction: column;
-    }
-
-    .leftPart {
-        width: 60%;
-    }
-
+.eyeIcon {
+    position: relative;
+    right: 25px;
 }

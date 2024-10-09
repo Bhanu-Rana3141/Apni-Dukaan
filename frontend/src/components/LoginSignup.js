@@ -3,30 +3,37 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import styles from './LoginSignup.module.css';
 
 export default function Login() {
 
-  const [rightPart, setRightPart] =  useState("login");  
+  const [formType, setFormType] = useState("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPasssword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
- // change login page to sign up page   
-  const signupHandler = () => {
-    setRightPart("sign up");
+  // toggle login and sign up form   
+  const toggleLoginSignup = () => {
+    setFormType("sign up");
+  }
+
+  // toggle visibility of password
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   }
 
   // Input validation function
   const validateInputs = () => {
-    if (rightPart === 'login') {
+    if (formType === 'login') {
       if (!email) {
         toast.error("Please fill in the email address.");
         return false;
       }
       if (!email.includes('@') || !email.includes('.')) {
-        toast.error("Email is not valid.");
+        toast.error("Please enter a valid email address.");
         return false;
       }
       if (!password) {
@@ -62,24 +69,23 @@ export default function Login() {
     return true;
   }
 
-  // handling login submission
+  // handling login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
 
     // Validate inputs
     if (!validateInputs()) {
-        return; 
+      return;
     }
 
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-        console.log(response.data);
-        localStorage.setItem('token', response.data.token);
-        toast.success("Login successfull!");
-        navigate('/home');
+      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      localStorage.setItem('token', response.data.token);
+      toast.success("Login successfull!");
+      navigate('/home');
     }
-    catch(error) {
-        toast.error(error.response.data.message || "Invalid email or password.");        
+    catch (error) {
+      toast.error(error.response.data.message || "Invalid email or password.");
     }
   }
 
@@ -89,80 +95,89 @@ export default function Login() {
 
     // Validate inputs
     if (!validateInputs()) {
-        return; 
-      }
+      return;
+    }
 
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
-        console.log(response.data);
-        localStorage.setItem('token', response.data.token);
-        toast.success("Registered successfully!"); 
-        navigate('/home');
+      const response = await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
+      localStorage.setItem('token', response.data.token);
+      toast.success("Registered successfully!");
+      navigate('/home');
     }
-    catch(error) {
-        toast.error(error.response.data.message || "Please try again.");
+    catch (error) {
+      toast.error(error.response.data.message || "Please try again.");
     }
   }
 
   return (
     <>
-        <div className={styles.loginSignupForm}>
-            
-            <div className={styles.leftPart}>
-                <h1>Apni Dukaan</h1>
-                <p>Your One-Stop Solution for Daily Essentials. Shop Now and Enjoy Effortless!</p>
+      <div className={styles.loginSignupForm}>
+
+        {formType === 'login' ? (
+
+          <div className={styles.form}>
+            <h2>Login</h2>
+
+            <input
+              type="Email"
+              placeholder='Enter email address '
+              required value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            {/* show or hide password */}
+            <div className={styles.passwordWrapper}>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder='Enter password'
+                required value={password}
+                onChange={(e) => setPasssword(e.target.value)}
+              />
+              <span onClick={togglePasswordVisibility} className={styles.eyeIcon}>
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
             </div>
-            
-            {rightPart === 'login' ? (
 
-                <div className={styles.rightPart}>
-                    <input 
-                        type="Email" 
-                        placeholder='Enter email address ' 
-                        required value={email} 
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input 
-                        type="password" 
-                        placeholder='Enter password' 
-                        required value={password} 
-                        onChange={(e) => setPasssword(e.target.value)}
-                    />
-                    <button className={styles.loginButton} onClick={handleLogin}>Log in</button>
-                    <p className={styles.dontHaveAccountPara}>Don't have an account ?</p>
-                    <button className={styles.createAccount} onClick={signupHandler}>Create new Account</button>
-                </div> 
+            <button className={styles.loginButton} onClick={handleLogin}>Log in</button>
+            <p className={styles.dontHaveAccountPara}>Don't have an account ? <span className={styles.links} onClick={toggleLoginSignup}> Sign up</span></p>
+          </div>
 
-            )  : 
-                <div className={styles.rightPart}>
+        ) : (
+          <div className={styles.form}>
+            <h2>Create new Account</h2>
 
-                    <div className={styles.newAccountHeading}>
-                        Create a new Account
-                    </div>
+            <input
+              type="text"
+              placeholder='Enter name'
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-                    <input 
-                        type="text" 
-                        placeholder='Enter name' 
-                        required 
-                        value={name} 
-                        onChange={ (e) => setName(e.target.value) }
-                    />
-                    <input 
-                        type="Email" 
-                        placeholder='Enter email address' 
-                        required value={email} 
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        type="password" 
-                        placeholder='Enter password'
-                        required value={password} 
-                        onChange={(e) => setPasssword(e.target.value)}
-                    />
-                    <button className={styles.loginButton} onClick={handleSignup}>Sign up</button>
-                </div>
-            }
-        </div> 
+            <input
+              type="email"
+              placeholder='Enter email address'
+              required value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            {/* show or hide password */}
+            <div className={styles.passwordWrapper}>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder='Enter password'
+                required value={password}
+                onChange={(e) => setPasssword(e.target.value)}
+              />
+              <span onClick={togglePasswordVisibility} className={styles.eyeIcon}>
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
+
+            <button className={styles.loginButton} onClick={handleSignup}>Sign up</button>
+          </div>
+        )}
+      </div>
     </>
   )
 }

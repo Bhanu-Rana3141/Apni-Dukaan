@@ -19,8 +19,8 @@ function App() {
           pauseOnHover 
         />
       <Routes>
-        <Route path='/' element={<LoginSignup/>}></Route>
-        <Route path='/home' element={<Home/>}></Route>
+        <Route path='/login' element={<LoginSignup/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
       </Routes>
     </>
   );

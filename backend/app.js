@@ -14,9 +14,9 @@ app.use(express.json());
 app.use(cors());
 
 // Importing routes
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/authRoutes');
 
-// Routes
+// middleware
 app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
