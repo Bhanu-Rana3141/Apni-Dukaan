@@ -1,0 +1,101 @@
+.loginSignupForm {
+    background: #f2f4f7;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.leftPart {
+    width: 40%;
+    margin-bottom: 100px;
+}
+
+.leftPart h1 {
+    color: #0866ff;
+    font-size: 50px;
+}
+
+.leftPart p {
+    font-size: 20px;
+    color: #1C1E21;
+}
+
+.rightPart {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 396px;
+    height: auto;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 20px 0px 28px;
+}
+
+.rightPart input{
+    width: 80%;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid #1d2129;
+    outline: none;
+}
+
+.rightPart button {
+    outline: none;
+}
+
+.loginButton {
+    width: 89%;
+    padding: 14px 16px;
+    background-color: #0866ff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+}
+
+.loginButton:hover {
+    background-color: #0867ffd8;
+    cursor: pointer;
+}
+
+.dontHaveAccountPara {
+    position: relative;
+    top: 20px;
+    font-size: 14px;
+}
+ 
+.createAccount {
+    background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    padding: 16px;
+}
+
+.createAccount:hover {
+    background-color: #42b72adc;
+    cursor: pointer;
+}
+
+.newAccountHeading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media(max-width: 713px) {
+    .loginSignupForm {
+        flex-direction: column;
+    }
+
+    .leftPart {
+        width: 60%;
+    }
+
+}
