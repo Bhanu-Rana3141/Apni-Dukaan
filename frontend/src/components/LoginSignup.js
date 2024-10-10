@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import styles from './LoginSignup.module.css';
+import { AuthContext } from '../context/AuthContext';
 
 export default function Login() {
 
+  const { login } = useContext(AuthContext); // Destructuring login from AuthContext
   const [formType, setFormType] = useState("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -80,9 +82,9 @@ export default function Login() {
 
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      localStorage.setItem('token', response.data.token);
+      login(response.data.token); // Using login function from AuthContext
       toast.success("Login successfull!");
-      navigate('/home');
+      navigate('/');
     }
     catch (error) {
       toast.error(error.response.data.message || "Invalid email or password.");
@@ -100,9 +102,9 @@ export default function Login() {
 
     try {
       const response = await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
-      localStorage.setItem('token', response.data.token);
+      login(response.data.token);
       toast.success("Registered successfully!");
-      navigate('/home');
+      navigate('/');
     }
     catch (error) {
       toast.error(error.response.data.message || "Please try again.");
