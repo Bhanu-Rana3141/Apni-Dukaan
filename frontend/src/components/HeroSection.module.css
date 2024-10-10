@@ -1,0 +1,40 @@
+.heroSection {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftPart {
+    width: 40%;
+}
+
+.leftPart h1 {
+    font-size: 3.7rem;
+}
+
+.leftPart p {
+    position: relative;
+    bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.rightPart {
+    width: 40%;
+}
+
+.rightPart img {
+    width: 100%;
+}
+
+@media(max-width : 1021px) {
+    .rightPart {
+        display: none;
+    }
+
+    .leftPart {
+        width: 100%;
+        text-align: center;
+    }
+} 
