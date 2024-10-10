@@ -38,7 +38,7 @@ export default function Login() {
       }
       if (!password) {
         toast.error("Please fill in the password.");
-        return false;
+        return false; 
       }
       if (password.length < 8) {
         toast.error("Password must be at least 8 characters long.");
@@ -112,19 +112,15 @@ export default function Login() {
   return (
     <>
       <div className={styles.loginSignupForm}>
-
         {formType === 'login' ? (
-
           <div className={styles.form}>
             <h2>Login</h2>
-
             <input
               type="Email"
               placeholder='Enter email address '
               required value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-
             {/* show or hide password */}
             <div className={styles.passwordWrapper}>
               <input
@@ -137,15 +133,12 @@ export default function Login() {
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>
             </div>
-
             <button className={styles.loginButton} onClick={handleLogin}>Log in</button>
             <p className={styles.dontHaveAccountPara}>Don't have an account ? <span className={styles.links} onClick={toggleLoginSignup}> Sign up</span></p>
           </div>
-
         ) : (
           <div className={styles.form}>
             <h2>Create new Account</h2>
-
             <input
               type="text"
               placeholder='Enter name'
@@ -153,14 +146,12 @@ export default function Login() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-
             <input
               type="email"
               placeholder='Enter email address'
               required value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-
             {/* show or hide password */}
             <div className={styles.passwordWrapper}>
               <input
@@ -173,7 +164,6 @@ export default function Login() {
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>
             </div>
-
             <button className={styles.loginButton} onClick={handleSignup}>Sign up</button>
           </div>
         )}
