@@ -10,7 +10,7 @@ export default function HeroSection() {
             <div className={styles.leftPart}>
                 <h1>Welcome to Apni Dukaan</h1>
                 <p>Your One-Stop Solution for Daily Essentials. Shop Now and Enjoy Effortless!</p>
-                <Link to=""><button className={styles.exploreButton}>Explore Categories</button></Link>
+                <Link to="/categories"><button className={styles.exploreButton}>Explore Categories</button></Link>
             </div>
 
             <div className={styles.rightPart}>

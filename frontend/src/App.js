@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Loading from './components/Loading.js';
+import Navbar from './components/Navbar.js';
 import LoginSignup from './components/LoginSignup.js';
 import Home from './components/Home.js';
+import Categories from './components/Categories.js';
 // import ProtectedRoute from './components/ProtectedRoute.js';
 
 function App() {
@@ -37,9 +39,11 @@ function App() {
           pauseOnHover 
         />
       {loading && <Loading />}
+      <Navbar/>
       <Routes>
-        <Route path='/login' element={<LoginSignup/>}></Route>
         <Route path='/' element={<Home/>}></Route>
+        <Route path='/login' element={<LoginSignup/>}></Route>
+        <Route path='/categories' element={<Categories/>}></Route>
       </Routes>
     </>
   );

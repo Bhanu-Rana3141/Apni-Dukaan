@@ -138,6 +138,7 @@ export default function Login() {
             <button className={styles.loginButton} onClick={handleLogin}>Log in</button>
             <p className={styles.dontHaveAccountPara}>Don't have an account ? <span className={styles.links} onClick={toggleLoginSignup}> Sign up</span></p>
           </div>
+          // Below code is for sign up
         ) : (
           <div className={styles.form}>
             <h2>Create new Account</h2>

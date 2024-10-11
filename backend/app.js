@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const path = require('path');
 const app = express();
 
 // Load environment variables
@@ -13,11 +14,16 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
+// Serve static files
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
+
 // Importing routes
 const authRoutes = require('./routes/authRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 // middleware
 app.use('/api/auth', authRoutes);
+app.use('/api/categories', categoryRoutes);
 
 const PORT = process.env.PORT || 5000;
 

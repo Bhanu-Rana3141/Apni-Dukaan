@@ -1,0 +1,103 @@
+[
+    {
+        "name": "Beverages",
+        "image": "categories/beverages.png",
+        "subcategories": [
+            { "name": "All" },
+            { "name": "Soft Drinks" },
+            { "name": "Energy Drinks" },
+            { "name": "Soda & Water" },
+            { "name": "Juices" }
+        ]
+    },
+    {
+        "name": "Snacks",
+        "image": "categories/snacks.png",
+        "subcategories": [
+            { "name": "All" },
+            { "name": "Chips & Kurkure" },
+            { "name": "Bhujiya & Namkeen" },
+            { "name": "Others" }
+        ]
+    },
+    { 
+        "name": "Bakery", 
+        "image": "categories/bakery.jpeg",
+        "subcategories": []
+    },
+    {
+        "name": "Stationery",
+        "image": "categories/stationary.jfif",
+        "subcategories": []
+    },
+    {
+        "name": "Dairy Products",
+        "image": "categories/dairy.jpeg",
+        "subcategories": []
+    },
+    {
+        "name": "Food Grains & Masalas",
+        "image": "categories/food_grains_masalas.png",
+        "subcategories": []
+    },
+    {
+        "name": "Dry Fruits",
+        "image": "categories/dryfruits.avif",
+        "subcategories": []
+    },
+    {
+        "name": "Chocolates & Toffees",
+        "image": "categories/chocolates_toffees.jpg",
+        "subcategories": []
+    },
+    {
+        "name": "Vegetables",
+        "image": "categories/vegetables.jpg",
+        "subcategories": []
+    },
+    {
+        "name": "Toothpaste & Brushes",
+        "image": "categories/toothpaste_brushes.avif",
+        "subcategories": []
+    },
+    {
+        "name": "Pooja Items",
+        "image": "categories/pooja_items.webp",
+        "subcategories": []
+    },
+    {
+        "name": "Slippers",
+        "image": "categories/slippers.jfif",
+        "subcategories": []
+    },
+    {
+        "name": "Mosquito Repellents",
+        "image": "categories/mosquito_repellents.jfif",
+        "subcategories": []
+    },
+    {
+        "name": "Cleaning & Household",
+        "image": "categories/cleaning_household.png",
+        "subcategories": []
+    },
+    {
+        "name": "Skin Care",
+        "image": "categories/skin_care.jfif",
+        "subcategories": []
+    },
+    {
+        "name": "Hair Care",
+        "image": "categories/hair_care.webp",
+        "subcategories": []
+    },
+    {
+        "name": "Baby Care",
+        "image": "categories/baby_care.webp",
+        "subcategories": []
+    },
+    {
+        "name": "LED Bulbs",
+        "image": "categories/led_bulbs.webp",
+        "subcategories": []
+    }
+]
