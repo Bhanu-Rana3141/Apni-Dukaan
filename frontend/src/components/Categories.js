@@ -28,7 +28,7 @@ export default function Categories() {
       <h2 className={styles.heading}>Shop by category</h2>
 
       {categories.length === 0 ? (
-        <p>No categories available</p>
+        <div><img className={styles.error} src="\images\Error404.jpg" alt="error404"/></div>
       ) : (
         <div className={styles.categoriesContainer}>
           {categories.map((category) => {
@@ -37,7 +37,7 @@ export default function Categories() {
             
             return (
               <div key={category._id} className={styles.categoriesItem}>
-                <Link to={linkPath}>
+                <Link to={linkPath.toLowerCase()}>
                   <img src={imageUrl} alt={category.name} className={styles.categoryImage} />
                   <h4 className={styles.categoryName}>{category.name}</h4>
                 </Link>

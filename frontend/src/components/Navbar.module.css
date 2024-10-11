@@ -53,9 +53,9 @@ a {
 }
 
 .profile-icon {
-    border: 2px solid black; /* Change color as needed */
-    border-radius: 50%; /* For a circular effect */
-    padding: 5px; /* Adjust padding as necessary */
+    border: 2px solid black;
+    border-radius: 50%; 
+    padding: 5px; 
 }
 
 .cartText {

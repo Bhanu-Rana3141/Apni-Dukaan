@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Loading from './components/Loading.js';
-import Navbar from './components/Navbar.js';
 import LoginSignup from './components/LoginSignup.js';
 import Home from './components/Home.js';
 import Categories from './components/Categories.js';
@@ -38,8 +37,8 @@ function App() {
           draggable 
           pauseOnHover 
         />
+      
       {loading && <Loading />}
-      <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<LoginSignup/>}></Route>
