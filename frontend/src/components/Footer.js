@@ -24,6 +24,7 @@ export default function Footer() {
                     <h4 className={styles.heading}>Quick Links</h4>
                     <Link onClick={handleHomeClick} className={styles.links} to="/">Home</Link>
                     <Link className={styles.links} to="/cart">Cart</Link>
+                    <Link className={styles.links} to="/categories">Categories</Link>
                 </div>
 
                 <div className={styles.linksContainer}>

@@ -6,7 +6,6 @@ import styles from './Categories.module.css';
 export default function Categories() {
 
   const [categories, setCategories] = useState([]);
-  
 
   useEffect(() => {
     

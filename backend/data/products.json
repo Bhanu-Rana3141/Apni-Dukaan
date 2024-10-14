@@ -1,0 +1,332 @@
+[
+    {
+        "image": "products/beverages/coca_cola_2L.avif",
+        "name": "Coca Cola Soft Drink (2L)",
+        "description": "Refreshing Coca Cola soft drink in a 2-liter bottle.",
+        "price": 90,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "stock": 100
+    },
+    {
+        "name": "Mountain Dew Grip Soft Drink",
+        "description": "Energizing Mountain Dew Grip in a 750 ml bottle.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/dew_750ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Fanta Orange Flavoured Soft Drink",
+        "description": "Delicious Fanta Orange flavored soft drink.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/fanta_750ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Coca Cola Soft Drink (750 ml)",
+        "description": "Refreshing Coca Cola soft drink in a 750 ml bottle.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/coca_cola_750ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Limca-Lime \"N\" Lemon Soft Drink (2L)",
+        "description": "Tangy Limca Lime \"N\" Lemon soft drink in a 2-liter bottle.",
+        "price": 90,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/limca_lemon_2L.webp",
+        "stock": 100
+    },
+    {
+        "name": "Mirinda Soft Drink (750 ml)",
+        "description": "Fruity Mirinda soft drink in a 750 ml bottle.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/mirinda_750ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Coca Cola Soft Drink (250 ml)",
+        "description": "Refreshing Coca Cola soft drink in a 250 ml bottle.",
+        "price": 20,
+        "quantity": "250 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/coca_cola_250ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Limca-Lime \"N\" Lemon Soft Drink (250 ml)",
+        "description": "Tangy Limca Lime \"N\" Lemon soft drink in a 250 ml bottle.",
+        "price": 20,
+        "quantity": "250 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/limca_250ml.jpg",
+        "stock": 100
+    },
+    {
+        "name": "Mirinda Orange Flavour Soft Drink",
+        "description": "Fruity Mirinda Orange Flavour soft drink.",
+        "price": 90,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/mirinda_2L.webp",
+        "stock": 100
+    },
+    {
+        "name": "Limca-Lime Lemon Soft Drink",
+        "description": "Tangy Limca-Lime Lemon soft drink.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/limca_Lemon_750ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Pepsi Soft Drink (750 ml)",
+        "description": "Refreshing Pepsi soft drink in a 750 ml bottle.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/pepsi_750ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Sprite Lime Flavoured Soft Drink",
+        "description": "Refreshing Sprite Lime Flavoured soft drink.",
+        "price": 90,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/sprite_2L.avif",
+        "stock": 100
+    },
+    {
+        "name": "Red Bull Energy Drink (250 ml)",
+        "description": "Energizing Red Bull Energy Drink in a 250 ml bottle.",
+        "price": 100,
+        "quantity": "250 ml",
+        "category": "Beverages",
+        "subcategory": "Energy Drinks",
+        "image": "products/beverages/redbul_250ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Mountain Dew Soft Drink",
+        "description": "Refreshing Mountain Dew soft drink.",
+        "price": 20,
+        "quantity": "400 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/dew_750ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Maaza Mango Drink (2L)",
+        "description": "Delicious Maaza Mango Drink in a 2-liter bottle.",
+        "price": 100,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/maaza_2l.jfif",
+        "stock": 100
+    },
+    {
+        "name": "Sprite Lime Flavoured Soft Drink",
+        "description": "Refreshing Sprite Lime Flavoured soft drink.",
+        "price": 40,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/sprite_2L.avif",
+        "stock": 100
+    },
+    {
+        "name": "Sting Energy Drink (250 ml)",
+        "description": "Energizing Sting Energy Drink in a 250 ml bottle.",
+        "price": 20,
+        "quantity": "250 ml",
+        "category": "Beverages",
+        "subcategory": "Energy Drinks",
+        "image": "products/beverages/sting_250ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Frooti Mango Drink (125 ml)",
+        "description": "Refreshing Frooti Mango Drink in a 125 ml bottle.",
+        "price": 10,
+        "quantity": "125 ml",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/frooti_125ml_bottle.jfif",
+        "stock": 100
+    },
+    {
+        "name": "Mountain Dew Soft Drink",
+        "description": "Refreshing Mountain Dew soft drink.",
+        "price": 90,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/dew_2L.avif",
+        "stock": 100
+    },
+    {
+        "name": "Hell Energy Drink (250 ml)",
+        "description": "Energizing Hell Energy Drink in a 250 ml bottle.",
+        "price": 50,
+        "quantity": "250 ml",
+        "category": "Beverages",
+        "subcategory": "Energy Drinks",
+        "image": "products/beverages/hell_250ml.jfif",
+        "stock": 100
+    },
+    {
+        "name": "Glucon-D Tangy Orange Instant Energy",
+        "description": "Energizing Glucon-D Tangy Orange Instant Energy drink.",
+        "price": 90,
+        "quantity": "200 g",
+        "category": "Beverages",
+        "subcategory": "Energy Drinks",
+        "image": "products/beverages/glucon_D_200g.avif",
+        "stock": 100
+    },
+    {
+        "name": "Appy Fizz Apple Juice (1L)",
+        "description": "Refreshing Appy Fizz Apple Juice in a 1-liter bottle.",
+        "price": 60,
+        "quantity": "1 L",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/appy_fizz.webp",
+        "stock": 100
+    },
+    {
+        "name": "Frooti Mango Drink (1.8L)",
+        "description": "Delicious Frooti Mango Drink in a 1.8-liter bottle.",
+        "price": 100,
+        "quantity": "1.8 L",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/frooti_1.8L.webp",
+        "stock": 100
+    },
+    {
+        "name": "Maaza Mango Drink (600 ml)",
+        "description": "Refreshing Maaza Mango Drink in a 600 ml bottle.",
+        "price": 40,
+        "quantity": "600 ml",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/mazaa_600ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Appy Fizz Apple Juice (125 ml)",
+        "description": "Refreshing Appy Fizz Apple Juice in a 125 ml bottle.",
+        "price": 10,
+        "quantity": "125 ml",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/appy_125ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Nimbooz With Lemon Juice",
+        "description": "Tangy Nimbooz With Lemon Juice.",
+        "price": 20,
+        "quantity": "250 ml",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/nimbooz_250ml.avif",
+        "stock": 100
+    },
+    {
+        "name": "Maaza Mango Drink (125 ml)",
+        "description": "Refreshing Maaza Mango Drink in a 125 ml bottle.",
+        "price": 10,
+        "quantity": "125 ml",
+        "category": "Beverages",
+        "subcategory": "Juices",
+        "image": "products/beverages/maaza_125ml.webp",
+        "stock": 100
+    },
+    {
+        "name": "Aquafine Packaged Water",
+        "description": "Pure Aquafine Packaged Water in a 1-liter bottle.",
+        "price": 20,
+        "quantity": "1 L",
+        "category": "Beverages",
+        "subcategory": "Soda & Water",
+        "image": "products/beverages/aquafine_1L.avif",
+        "stock": 100
+    },
+    {
+        "name": "Bisleri Packaged Water (1 L)",
+        "description": "Pure Bisleri Packaged Water in a 1-liter bottle.",
+        "price": 20,
+        "quantity": "1 L",
+        "category": "Beverages",
+        "subcategory": "Soda & Water",
+        "image": "products/beverages/bisleri_1L.avif",
+        "stock": 100
+    },
+    {
+        "name": "Pepsi Soft Drink (2 L)",
+        "description": "Refreshing Pepsi soft drink in a 2-liter bottle.",
+        "price": 90,
+        "quantity": "2 L",
+        "category": "Beverages",
+        "subcategory": "Soft Drinks",
+        "image": "products/beverages/pepsi_2L.jpg",
+        "stock": 100
+    },
+    {
+        "name": "Kinley Packaged Water (1000 ml)",
+        "description": "Pure Kinley Packaged Water in a 1-liter bottle.",
+        "price": 20,
+        "quantity": "1 L",
+        "category": "Beverages",
+        "subcategory": "Soda & Water",
+        "image": "products/beverages/kinley_1L.avif",
+        "stock": 100
+    },
+    {
+        "name": "Kinley Club Soda (750 ml)",
+        "description": "Pure Kinley Club Soda in a 750 ml bottle.",
+        "price": 20,
+        "quantity": "750 ml",
+        "category": "Beverages",
+        "subcategory": "Soda & Water",
+        "image": "products/beverages/kinley_club_soda_750ml.jpg",
+        "stock": 100
+    },
+    {
+        "name": "Lohori Zeera",
+        "description": "Tangy Lohori Zeera flavor.",
+        "price": 240,
+        "quantity": "24 * 160 ml",
+        "category": "Beverages",
+        "subcategory": "Soda & Water",
+        "image": "products/beverages/lohori_zeera_160ml.avif",
+        "stock": 100
+    }
+]

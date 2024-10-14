@@ -14,12 +14,14 @@ const categorySchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true,
+        trim: true,
     },
     image : {
         type: String,
         required: true,
     },
-    subcategories: [subcategorySchema],
+    // array of subcategories
+    subcategories: [subcategorySchema], 
 }, {timeStamps:true});
 
 module.exports = mongoose.model('Category', categorySchema);

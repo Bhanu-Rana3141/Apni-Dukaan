@@ -3,7 +3,6 @@
         "name": "Beverages",
         "image": "categories/beverages.png",
         "subcategories": [
-            { "name": "All" },
             { "name": "Soft Drinks" },
             { "name": "Energy Drinks" },
             { "name": "Soda & Water" },
@@ -14,7 +13,6 @@
         "name": "Snacks",
         "image": "categories/snacks.png",
         "subcategories": [
-            { "name": "All" },
             { "name": "Chips & Kurkure" },
             { "name": "Bhujiya & Namkeen" },
             { "name": "Others" }

@@ -4,21 +4,21 @@ const path = require('path');
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 const connectDB = require('../config/db');
 const Category = require('../models/categoryModel');
-const categoriesData = require('../data/categories.json');
+const categories = require('../data/categories.json');
 
 
-const addCategories = async () => {
+const insertCategories = async () => {
     try {
         await connectDB();
-        const result = await Category.insertMany(categoriesData);
+        const result = await Category.insertMany(categories);
         console.log(`${result.length} categories inserted`);
     }
     catch(error) {
         console.log(`error in inserting categories : ${error.message}`);
     }
     finally {
-        mongoose.connection.close();
+        await mongoose.connection.close();
     }
 }
 
-addCategories();
+insertCategories();
