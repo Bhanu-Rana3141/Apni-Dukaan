@@ -2,21 +2,12 @@
     {
         "name": "Beverages",
         "image": "categories/beverages.png",
-        "subcategories": [
-            { "name": "Soft Drinks" },
-            { "name": "Energy Drinks" },
-            { "name": "Soda & Water" },
-            { "name": "Juices" }
-        ]
+        "subcategories": ["Soft Drinks", "Energy Drinks", "Soda & Water", "Juices"]
     },
     {
         "name": "Snacks",
         "image": "categories/snacks.png",
-        "subcategories": [
-            { "name": "Chips & Kurkure" },
-            { "name": "Bhujiya & Namkeen" },
-            { "name": "Others" }
-        ]
+        "subcategories": ["Chips & Kurkure", "Bhujiya & Namkeen", "Others"]
     },
     { 
         "name": "Bakery", 

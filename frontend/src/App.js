@@ -10,6 +10,7 @@ import Footer from './components/Footer.js';
 import LoginSignup from './components/LoginSignup.js';
 import Home from './components/Home.js';
 import Categories from './components/Categories.js';
+import Products from './components/Products.js';
 // import ProtectedRoute from './components/ProtectedRoute.js';
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<LoginSignup/>}></Route>
         <Route path='/categories' element={<Categories/>}></Route>
+        <Route path='/:categoryName/products' element={<Products/>}></Route>
+        <Route path='/categories/:categoryName/products/:subcategoryName' element={<Products/>}></Route>
       </Routes>
       <Footer/>
     </>

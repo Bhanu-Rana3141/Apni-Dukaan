@@ -36,7 +36,7 @@ export default function Categories() {
             
             return (
               <div key={category._id} className={styles.categoriesItem}>
-                <Link to={linkPath.toLowerCase()}>
+                <Link to={`${linkPath.toLowerCase()}/products`}>
                   <img src={imageUrl} alt={category.name} className={styles.categoryImage} />
                   <h4 className={styles.categoryName}>{category.name}</h4>
                 </Link>

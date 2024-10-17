@@ -29,28 +29,28 @@ export default function Footer() {
 
                 <div className={styles.linksContainer}>
                     <h4 className={styles.heading}>Categories</h4>
-                    <Link className={styles.links} to="/beverages">Beverages</Link>
-                    <Link className={styles.links} to="/snacks">Snacks</Link>
-                    <Link className={styles.links} to="/bakery">Bakery</Link>
-                    <Link className={styles.links} to="/stationery">Stationery</Link>
-                    <Link className={styles.links}  to="/dairy products">Dairy Products</Link>
-                    <Link className={styles.links} to="/food grains & masalas">Food Grains & Masalas</Link>
-                    <Link className={styles.links} to="/chocolates & toffees">Chocolates & Toffees</Link>
-                    <Link className={styles.links} to="/vegetables">Vegetables</Link>
-                    <Link className={styles.links} to="/toothpaste & brushes">Tooth Paste & Brushes</Link>
+                    <Link className={styles.links} to="/beverages/products">Beverages</Link>
+                    <Link className={styles.links} to="/snacks/products">Snacks</Link>
+                    <Link className={styles.links} to="/bakery/products">Bakery</Link>
+                    <Link className={styles.links} to="/stationery/products">Stationery</Link>
+                    <Link className={styles.links}  to="/dairy products/products">Dairy Products</Link>
+                    <Link className={styles.links} to="/food grains & masalas/products">Food Grains & Masalas</Link>
+                    <Link className={styles.links} to="/chocolates & toffees/products">Chocolates & Toffees</Link>
+                    <Link className={styles.links} to="/vegetables/products">Vegetables</Link>
+                    <Link className={styles.links} to="/toothpaste & brushes/products">Tooth Paste & Brushes</Link>
                 </div>
 
                 <div className={styles.linksContainer}>
                     <h4 className={styles.heading}>More Categories</h4>
-                    <Link className={styles.links} to="/pooja items">Pooja Items</Link>
-                    <Link className={styles.links} to="/slippers">Slippers</Link>
-                    <Link className={styles.links} to="/mosquito repellents">Mosquito Repellents</Link>
-                    <Link className={styles.links} to="/cleaning & household">Cleaning & Household</Link>
-                    <Link className={styles.links} to="/skin care">Skin Care</Link>
-                    <Link className={styles.links} to="/babby care">Baby Care</Link>
-                    <Link className={styles.links} to="/hair care">Hair Care</Link>
-                    <Link className={styles.links} to="/led bulbs">LED Bulbs</Link>
-                    <Link className={styles.links} to="/dry fruits">Dry Fruits</Link>
+                    <Link className={styles.links} to="/pooja items/products">Pooja Items</Link>
+                    <Link className={styles.links} to="/slippers/products">Slippers</Link>
+                    <Link className={styles.links} to="/mosquito repellents/products">Mosquito Repellents</Link>
+                    <Link className={styles.links} to="/cleaning & household/products">Cleaning & Household</Link>
+                    <Link className={styles.links} to="/skin care/products">Skin Care</Link>
+                    <Link className={styles.links} to="/babby care/products">Baby Care</Link>
+                    <Link className={styles.links} to="/hair care/products">Hair Care</Link>
+                    <Link className={styles.links} to="/led bulbs/products">LED Bulbs</Link>
+                    <Link className={styles.links} to="/dry fruits/products">Dry Fruits</Link>
                 </div>
 
                 <div className={styles.connectContainer}>
