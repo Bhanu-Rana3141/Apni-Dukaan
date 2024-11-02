@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import Loading from './components/Loading.js';
 import ScrollToTop from './components/ScrollToTop.js';
 import Navbar from './components/Navbar.js';
+import AllProducts from './components/AllProducts.js';
 import Footer from './components/Footer.js';
 import LoginSignup from './components/LoginSignup.js';
 import Home from './components/Home.js';
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<LoginSignup/>}></Route>
+        <Route path="/allproducts/search" element={<AllProducts />} />
         <Route path='/categories' element={<Categories/>}></Route>
         <Route path='/:categoryName/products' element={<Products/>}></Route>
         <Route path='/categories/:categoryName/products/:subcategoryName' element={<Products/>}></Route>

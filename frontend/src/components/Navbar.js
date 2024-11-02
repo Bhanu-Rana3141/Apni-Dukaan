@@ -47,8 +47,12 @@ export default function Navbar() {
         toast.success('Successfully logged out!');
     };
       
+    // Redirect to the All Products page to search products
+    const handleSearchClick = () => {
+        navigate('/allproducts/search');  
+    };
 
-return (
+    return (
     <>
         <div className={styles.navbar}>
             <div className={styles.logoParent}>
@@ -57,7 +61,7 @@ return (
 
             <div className={styles.searchParent}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.searchIcon} />
-                <input className={styles.searchBar} type="text" placeholder='Search Products' />
+                <input className={styles.searchBar} type="text" placeholder='Search Products' onClick={handleSearchClick}/>
             </div>
 
             <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.active : ""}`}>
