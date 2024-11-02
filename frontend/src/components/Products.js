@@ -1,8 +1,8 @@
-// src/components/Products.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Products.module.css';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
     const { categoryName, subcategoryName } = useParams();
@@ -11,7 +11,7 @@ const Products = () => {
     const [subcategories, setSubcategories] = useState([]);
     const navigate = useNavigate();
 
-    // Fetch all categories including subcategories
+    // Fetch all categories and subcategories
     const fetchCategories = async () => {
         try {
             const response = await axios.get('http://localhost:5000/api/categories'); 
@@ -84,12 +84,14 @@ const Products = () => {
                 ) : (
                     products.map((product) => (
                         <div key={product._id} className={styles.productItem}>
-                            <img className={styles.productImage} src={`http://localhost:5000/images/${product.image}`} alt={product.name} />
-                            <h3 className={styles.productName}>{product.name}</h3>
-                            <div className={styles.itemFooter}>
-                                <p className={styles.productPrice}>₹{product.price.toFixed(2)}</p>
-                                <p className={styles.productQuantity}>{product.quantity}</p>
-                            </div>
+                            <Link to={`/product/${product._id}`}>
+                                <img className={styles.productImage} src={`http://localhost:5000/images/${product.image}`} alt={product.name} />
+                                <h3 className={styles.productName}>{product.name}</h3>
+                                <div className={styles.itemFooter}>
+                                    <p className={styles.productPrice}>₹{product.price.toFixed(2)}</p>
+                                    <p className={styles.productQuantity}>{product.quantity}</p>
+                                </div>
+                            </Link>
                             <button className={styles.addToCart}>Add to Cart</button>
                         </div>
                     ))

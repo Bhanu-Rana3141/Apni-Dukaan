@@ -10,6 +10,7 @@ const categories = require('../data/categories.json');
 const insertCategories = async () => {
     try {
         await connectDB();
+
         const result = await Category.insertMany(categories);
         console.log(`${result.length} categories inserted`);
     }
