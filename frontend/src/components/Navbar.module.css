@@ -192,3 +192,10 @@ a {
 .logoutButton:hover {
     background-color: #f0f0f0;
 }
+
+@media(max-width : 1023px) {
+    .dropdown {
+        position: absolute;
+        left: 0px;
+    }
+}
