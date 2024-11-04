@@ -13,7 +13,8 @@ import Home from './components/Home.js';
 import Categories from './components/Categories.js';
 import Products from './components/Products.js';
 import ProductPage from './components/ProductPage.js';
-// import ProtectedRoute from './components/ProtectedRoute.js';
+import Cart from './components/Cart.js';
+import ProtectedRoute from './components/ProtectedRoute.js';
 
 function App() {
 
@@ -56,7 +57,8 @@ function App() {
         <Route path='/:categoryName/products' element={<Products/>}></Route>
         <Route path='/categories/:categoryName/products/:subcategoryName' element={<Products/>}></Route>
         <Route path='/product/:id' element={<ProductPage/>}></Route>
-
+        <Route path='/cart' element={<ProtectedRoute> <Cart/> </ProtectedRoute>}></Route>
+        
       </Routes>
       <Footer/>
     </>

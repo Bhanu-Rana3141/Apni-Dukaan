@@ -88,7 +88,6 @@ a {
     justify-content: space-between;
 }
 
-
 .addToCart {
     color: #318616;
     background-color: #F7FFF9;
@@ -96,4 +95,8 @@ a {
     padding: 10px 15px;
     width: 100%;
     border-radius: 10px;
+}
+
+.addToCart:hover {
+    cursor: pointer;
 }

@@ -6,8 +6,7 @@
         "price": 90,
         "quantity": "2 L",
         "category": "Beverages",
-        "subcategory": "Soft Drinks",
-        "stock": 100
+        "subcategory": "Soft Drinks"
     },
     {
         "name": "Mountain Dew Grip Soft Drink",
@@ -16,8 +15,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/dew_750ml.webp",
-        "stock": 100
+        "image": "products/beverages/dew_750ml.webp"
     },
     {
         "name": "Fanta Orange Flavoured Soft Drink",
@@ -26,8 +24,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/fanta_750ml.avif",
-        "stock": 100
+        "image": "products/beverages/fanta_750ml.avif"
     },
     {
         "name": "Coca Cola Soft Drink (750 ml)",
@@ -36,8 +33,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/coca_cola_750ml.webp",
-        "stock": 100
+        "image": "products/beverages/coca_cola_750ml.webp"
     },
     {
         "name": "Limca-Lime \"N\" Lemon Soft Drink (2L)",
@@ -46,8 +42,7 @@
         "quantity": "2 L",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/limca_lemon_2L.webp",
-        "stock": 100
+        "image": "products/beverages/limca_lemon_2L.webp"
     },
     {
         "name": "Mirinda Soft Drink (750 ml)",
@@ -56,8 +51,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/mirinda_750ml.avif",
-        "stock": 100
+        "image": "products/beverages/mirinda_750ml.avif"
     },
     {
         "name": "Coca Cola Soft Drink (250 ml)",
@@ -66,8 +60,7 @@
         "quantity": "250 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/coca_cola_250ml.webp",
-        "stock": 100
+        "image": "products/beverages/coca_cola_250ml.webp"
     },
     {
         "name": "Limca-Lime \"N\" Lemon Soft Drink (250 ml)",
@@ -76,8 +69,7 @@
         "quantity": "250 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/limca_250ml.jpg",
-        "stock": 100
+        "image": "products/beverages/limca_250ml.jpg"
     },
     {
         "name": "Mirinda Orange Flavour Soft Drink",
@@ -86,8 +78,7 @@
         "quantity": "2 L",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/mirinda_2L.webp",
-        "stock": 100
+        "image": "products/beverages/mirinda_2L.webp"
     },
     {
         "name": "Limca-Lime Lemon Soft Drink",
@@ -96,8 +87,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/limca_Lemon_750ml.avif",
-        "stock": 100
+        "image": "products/beverages/limca_Lemon_750ml.avif"
     },
     {
         "name": "Pepsi Soft Drink (750 ml)",
@@ -106,8 +96,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/pepsi_750ml.webp",
-        "stock": 100
+        "image": "products/beverages/pepsi_750ml.webp"
     },
     {
         "name": "Sprite Lime Flavoured Soft Drink",
@@ -116,8 +105,7 @@
         "quantity": "2 L",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/sprite_2L.avif",
-        "stock": 100
+        "image": "products/beverages/sprite_2L.avif"
     },
     {
         "name": "Red Bull Energy Drink (250 ml)",
@@ -126,8 +114,7 @@
         "quantity": "250 ml",
         "category": "Beverages",
         "subcategory": "Energy Drinks",
-        "image": "products/beverages/redbul_250ml.avif",
-        "stock": 100
+        "image": "products/beverages/redbul_250ml.avif"
     },
     {
         "name": "Mountain Dew Soft Drink",
@@ -136,8 +123,7 @@
         "quantity": "400 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/dew_750ml.webp",
-        "stock": 100
+        "image": "products/beverages/dew_750ml.webp"
     },
     {
         "name": "Maaza Mango Drink (2L)",
@@ -146,8 +132,7 @@
         "quantity": "2 L",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/maaza_2l.jfif",
-        "stock": 100
+        "image": "products/beverages/maaza_2l.jfif"
     },
     {
         "name": "Sprite Lime Flavoured Soft Drink",
@@ -156,8 +141,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/sprite_2L.avif",
-        "stock": 100
+        "image": "products/beverages/sprite_2L.avif"
     },
     {
         "name": "Sting Energy Drink (250 ml)",
@@ -166,8 +150,7 @@
         "quantity": "250 ml",
         "category": "Beverages",
         "subcategory": "Energy Drinks",
-        "image": "products/beverages/sting_250ml.avif",
-        "stock": 100
+        "image": "products/beverages/sting_250ml.avif"
     },
     {
         "name": "Frooti Mango Drink (125 ml)",
@@ -176,8 +159,7 @@
         "quantity": "125 ml",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/frooti_125ml_bottle.jfif",
-        "stock": 100
+        "image": "products/beverages/frooti_125ml_bottle.jfif"
     },
     {
         "name": "Mountain Dew Soft Drink",
@@ -186,8 +168,7 @@
         "quantity": "2 L",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/dew_2L.avif",
-        "stock": 100
+        "image": "products/beverages/dew_2L.avif"
     },
     {
         "name": "Hell Energy Drink (250 ml)",
@@ -196,8 +177,7 @@
         "quantity": "250 ml",
         "category": "Beverages",
         "subcategory": "Energy Drinks",
-        "image": "products/beverages/hell_250ml.jfif",
-        "stock": 100
+        "image": "products/beverages/hell_250ml.jfif"
     },
     {
         "name": "Glucon-D Tangy Orange Instant Energy",
@@ -206,8 +186,7 @@
         "quantity": "200 g",
         "category": "Beverages",
         "subcategory": "Energy Drinks",
-        "image": "products/beverages/glucon_D_200g.avif",
-        "stock": 100
+        "image": "products/beverages/glucon_D_200g.avif"
     },
     {
         "name": "Appy Fizz Apple Juice (1L)",
@@ -216,8 +195,7 @@
         "quantity": "1 L",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/appy_fizz.webp",
-        "stock": 100
+        "image": "products/beverages/appy_fizz.webp"
     },
     {
         "name": "Frooti Mango Drink (1.8L)",
@@ -226,8 +204,7 @@
         "quantity": "1.8 L",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/frooti_1.8L.webp",
-        "stock": 100
+        "image": "products/beverages/frooti_1.8L.webp"
     },
     {
         "name": "Maaza Mango Drink (600 ml)",
@@ -236,8 +213,7 @@
         "quantity": "600 ml",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/mazaa_600ml.avif",
-        "stock": 100
+        "image": "products/beverages/mazaa_600ml.avif"
     },
     {
         "name": "Appy Fizz Apple Juice (125 ml)",
@@ -246,8 +222,7 @@
         "quantity": "125 ml",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/appy_125ml.webp",
-        "stock": 100
+        "image": "products/beverages/appy_125ml.webp"
     },
     {
         "name": "Nimbooz With Lemon Juice",
@@ -256,8 +231,7 @@
         "quantity": "250 ml",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/nimbooz_250ml.avif",
-        "stock": 100
+        "image": "products/beverages/nimbooz_250ml.avif"
     },
     {
         "name": "Maaza Mango Drink (125 ml)",
@@ -266,8 +240,7 @@
         "quantity": "125 ml",
         "category": "Beverages",
         "subcategory": "Juices",
-        "image": "products/beverages/maaza_125ml.webp",
-        "stock": 100
+        "image": "products/beverages/maaza_125ml.webp"
     },
     {
         "name": "Aquafine Packaged Water",
@@ -276,8 +249,7 @@
         "quantity": "1 L",
         "category": "Beverages",
         "subcategory": "Soda & Water",
-        "image": "products/beverages/aquafine_1L.avif",
-        "stock": 100
+        "image": "products/beverages/aquafine_1L.avif"
     },
     {
         "name": "Bisleri Packaged Water (1 L)",
@@ -286,8 +258,7 @@
         "quantity": "1 L",
         "category": "Beverages",
         "subcategory": "Soda & Water",
-        "image": "products/beverages/bisleri_1L.avif",
-        "stock": 100
+        "image": "products/beverages/bisleri_1L.avif"
     },
     {
         "name": "Pepsi Soft Drink (2 L)",
@@ -296,8 +267,7 @@
         "quantity": "2 L",
         "category": "Beverages",
         "subcategory": "Soft Drinks",
-        "image": "products/beverages/pepsi_2L.jpg",
-        "stock": 100
+        "image": "products/beverages/pepsi_2L.jpg"
     },
     {
         "name": "Kinley Packaged Water (1000 ml)",
@@ -306,8 +276,7 @@
         "quantity": "1 L",
         "category": "Beverages",
         "subcategory": "Soda & Water",
-        "image": "products/beverages/kinley_1L.avif",
-        "stock": 100
+        "image": "products/beverages/kinley_1L.avif"
     },
     {
         "name": "Kinley Club Soda (750 ml)",
@@ -316,8 +285,7 @@
         "quantity": "750 ml",
         "category": "Beverages",
         "subcategory": "Soda & Water",
-        "image": "products/beverages/kinley_club_soda_750ml.jpg",
-        "stock": 100
+        "image": "products/beverages/kinley_club_soda_750ml.jpg"
     },
     {
         "name": "Lohori Zeera",
@@ -326,7 +294,6 @@
         "quantity": "24 * 160 ml",
         "category": "Beverages",
         "subcategory": "Soda & Water",
-        "image": "products/beverages/lohori_zeera_160ml.avif",
-        "stock": 100
+        "image": "products/beverages/lohori_zeera_160ml.avif"
     }
 ]

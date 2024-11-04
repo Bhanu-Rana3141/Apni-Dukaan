@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams , useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import styles from './ProductPage.module.css';
 
 const ProductPage = () => {
+    const navigate = useNavigate(); // for navigation
     const { id } = useParams(); // get productId from url 
     const [product, setProduct] = useState(null); 
-
+    const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -21,6 +23,35 @@ const ProductPage = () => {
         fetchProduct();
     }, [id]);
 
+    const addToCart = async (product) => {
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            toast.error("Please log in to add items to the cart.");
+            navigate('/login'); 
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://localhost:5000/api/cart/add', {
+                productId: product._id,
+                name: product.name,
+                description: product.description,
+                image: product.image,
+                price: product.price,
+                quantity: quantity,
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            toast.success(response.data.message || "Product added to cart successfully!");
+        } catch (error) {
+            toast.error("Failed to add product to cart.");
+        }
+    };
+
     return (
         <div className={styles.productPage}>
             {product ? (
@@ -34,32 +65,22 @@ const ProductPage = () => {
                         <p>{product.description}</p>
                         <p>₹{product.price.toFixed(2)}</p>
                         <p className={styles.quantity}>{product.quantity}</p>
-                        <select>
-                            <option selected>Select Quantity</option>    
-                            <option >1</option>    
-                            <option >2</option>    
-                            <option >3</option>    
-                            <option >4</option>    
-                            <option >5</option>    
-                            <option >6</option>    
-                            <option >7</option>    
-                            <option >8</option>    
-                            <option >9</option>    
-                            <option >10</option>    
-                            <option >11</option>    
-                            <option >12</option>    
-                            <option >13</option>    
-                            <option >14</option>    
-                            <option >15</option>    
-                            <option >16</option>    
-                            <option >17</option>    
-                            <option >18</option>    
-                            <option >19</option>    
-                            <option >20</option>    
+                        <select onChange={(e) => setQuantity(Number(e.target.value))}>    
+                            <option selected>Quantity</option>
+                            <option value="1">1</option>    
+                            <option value="2">2</option>    
+                            <option value="3">3</option>    
+                            <option value="4">4</option>    
+                            <option value="5">5</option>    
+                            <option value="6">6</option>    
+                            <option value="7">7</option>    
+                            <option value="8">8</option>    
+                            <option value="9">9</option>    
+                            <option value="10">10</option>    
                         </select>    
 
                         <div className={styles.btn}>
-                            <button className={styles.cartBtn}>Add to Cart</button>
+                            <button className={styles.cartBtn} onClick={() => addToCart(product)}>Add to Cart</button>
                             <button className={styles.buyBtn}>Buy Now</button>
                         </div>
 

@@ -61,9 +61,6 @@ export default function Footer() {
                     <Link to="https://www.linkedin.com/in/bhanu-partap-singh-rana-875957272/">
                         <img className={styles.connect} src="/Images/linkedinLogo.png" alt="LinkedIn" />
                     </Link>
-                    <Link to="https://www.instagram.com/bhanu.rana3141/">
-                        <img className={styles.connect} src="/Images/instagramLogo.png" alt="Instagram" />
-                    </Link>
                 </div>
             </div>
 

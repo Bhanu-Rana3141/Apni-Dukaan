@@ -37,3 +37,10 @@
         display: none;
     }
 }
+
+
+@media(max-width : 350px) {
+    .footerContainer {
+        flex-direction: column;
+    }
+}

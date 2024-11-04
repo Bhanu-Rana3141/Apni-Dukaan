@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Products.module.css';
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Products = () => {
     const { categoryName, subcategoryName } = useParams();
@@ -57,6 +59,36 @@ const Products = () => {
         fetchProducts(); 
     }, [categoryName, subcategoryName]);
 
+    const addToCart = async (product) => {
+
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            toast.error("Please log in to add items to the cart.");
+            navigate('/login'); 
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://localhost:5000/api/cart/add', {
+                productId: product._id,
+                name: product.name,
+                description: product.description,
+                image: product.image,
+                price: product.price,
+                quantity: 1,
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            toast.success(response.data.message || "Product added to cart successfully!");
+        } catch (error) {
+            toast.error("Failed to add product to cart.");
+        }
+    };
+
     return (
         <div className={styles.productsContainer}>
             <div className={styles.leftSidebar}>
@@ -92,7 +124,7 @@ const Products = () => {
                                     <p className={styles.productQuantity}>{product.quantity}</p>
                                 </div>
                             </Link>
-                            <button className={styles.addToCart}>Add to Cart</button>
+                            <button className={styles.addToCart} onClick={() => addToCart(product)}>Add to Cart</button>
                         </div>
                     ))
                 )}
