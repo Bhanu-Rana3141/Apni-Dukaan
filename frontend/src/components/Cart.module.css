@@ -1,3 +1,16 @@
+.emptyCart {
+    margin: 110px 0;
+}
+
+.emptyCart img{
+    width: 250px;
+}
+
+.emptyCart p {
+    text-align: center;
+    font-size: 18px;
+}
+
 .heading {
     font-size: 1.5rem;
 }
@@ -21,7 +34,7 @@
 .cartItem {
     list-style: none;
     display: flex;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 .cartItem img {
@@ -46,6 +59,15 @@
 
 select {
     width: 6rem;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
 }
 
 .deleteLink {
@@ -99,8 +121,4 @@ select {
     .proceedButton {
         width: 50%;
     }
-}
-
-@media(max-width : 300px) {
-
 }

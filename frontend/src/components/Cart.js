@@ -34,7 +34,6 @@ export default function Cart() {
         },
       });
       setCartItems(prevItems => prevItems.map(item => item.productId._id === productId ? { ...item, quantity } : item));
-      toast.success("Cart updated successfully !!");
     } catch (error) {
       toast.error("Failed to update cart.");
     }
@@ -63,7 +62,10 @@ export default function Cart() {
     <>
       <div className={styles.cartContainer}>
         {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <div className={styles.emptyCart}>
+            <img src='images\cartEmpty.png' alt='Cart empty'></img>
+            <p>Your cart is empty.</p>
+          </div>
         ) : (
           <>
             <ul className={styles.cartList}>
@@ -76,7 +78,7 @@ export default function Cart() {
                     <div className={styles.itemDetails}>
                       <p className={styles.productName}>{item.productId.name}</p>
                       <p className={styles.productDescription}>{item.productId.description}</p>
-                      <p className={styles.productPrice}>₹{item.productId.price.toFixed(2)}</p>
+                      <p className={styles.productPrice}>Price: ₹{item.productId.price.toFixed(2)}</p>
                       <p>
                         <select
                           value={item.quantity}
@@ -101,12 +103,12 @@ export default function Cart() {
               ))}
 
               <hr></hr>
-              <p className={styles.subtotal}>Subtotal ({cartItems.length} items) : ₹{calculateTotalPrice()}</p>
+              <p className={styles.subtotal}>Subtotal ( {cartItems.length} {cartItems.length > 1 ? 'items' : 'item'}) : ₹{calculateTotalPrice()}</p>
 
             </ul>
               
             <div className={styles.total}>
-              <h4>Subtotal ({cartItems.length} items) : ₹{calculateTotalPrice()}</h4>
+              <h4>Subtotal ({cartItems.length} {cartItems.length > 1 ? 'items' : 'item'} ) : ₹{calculateTotalPrice()}</h4>
               <button className={styles.proceedButton}>Proceed to Buy</button>
             </div>
             
