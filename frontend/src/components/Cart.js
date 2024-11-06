@@ -72,7 +72,7 @@ export default function Cart() {
               <h2 className={styles.heading}>Shopping Cart</h2>
               {cartItems.map(item => (
                 <>
-                  <hr className={styles.line}></hr>
+                  <hr></hr>
                   <li key={item.productId._id} className={styles.cartItem}>
                     <img src={`http://localhost:5000/images/${item.productId.image}`} alt={item.productId.name} />
                     <div className={styles.itemDetails}>
@@ -106,12 +106,31 @@ export default function Cart() {
               <p className={styles.subtotal}>Subtotal ( {cartItems.length} {cartItems.length > 1 ? 'items' : 'item'}) : ₹{calculateTotalPrice()}</p>
 
             </ul>
-              
-            <div className={styles.total}>
-              <h4>Subtotal ({cartItems.length} {cartItems.length > 1 ? 'items' : 'item'} ) : ₹{calculateTotalPrice()}</h4>
-              <button className={styles.proceedButton}>Proceed to Buy</button>
-            </div>
             
+            {/* price details part */}
+            <div className={styles.priceDetails}>
+              <div className={styles.priceDetailsHeading}>Price Details</div>
+
+              <div className={styles.itemsPrice}>
+                <div>Price ({cartItems.length} {cartItems.length > 1 ? 'items' : 'item'})</div>
+                <div>₹{calculateTotalPrice()}</div>
+              </div>
+              
+              <div className={styles.deliveryCharge}>
+                <div>Delivery Charges</div>
+                <div><del className={styles.deleteDeliveryCharges}>₹50</del>FREE</div>
+              </div>
+
+              <div className={styles.total}>
+                <div>Subtotal</div>
+                <div>₹{calculateTotalPrice()}</div>
+              </div>
+
+              <div className={styles.proceedToBuyBtn}>
+                <button className={styles.proceedButton}>Proceed to Buy</button>
+              </div>
+            </div>
+
           </>
         )}
       </div>
