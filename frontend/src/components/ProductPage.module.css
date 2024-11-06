@@ -1,66 +1,69 @@
 .productPage {
     width: 100%;
-    margin-top: 130px;
+    margin-top: 110px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 110px;
 }
 
 .productImage {
-    width: 30%;
+    width: 40%;
     text-align: center;
-    border: 1px solid rgba(128, 128, 128, 0.587);
     border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.247);
 }
 
 .productImage img {
-    height: 20rem; 
+    height: 23rem; 
     max-width: 100%;
     object-fit: cover;
     padding: 20px;
 }
 
+/* Right Part */
+
 .productDetails {
-    width: 40%;
+    position: relative;
+    top: 50px;
 }
 
-.productPage p {
+.productName {
+    color: #1F1F1F;
+}
+
+.productDescription, .productPrice {
     font-size: 1.1rem;
+    color: #1F1F1F;
 }
 
 .productPrice {
     font-weight: 500;
 }
 
-.quantity {
-    color: #666;
+.productCapacity {
+    color: #666666;
+    font-size: 0.9rem;
 }
 
-.btn {
-    display: flex;
-    gap: 20px;
+.inclusiveLine {
+    font-size: 0.9rem;
+    color: #666666;
+    position: relative;
+    bottom: 15px;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-.btn button {
-    margin-top: 40px;
-    outline: none;
-    border-radius: 5px;
-    padding: 8px 30px;
-}
-
 .cartBtn {
-    background-color: #CC0000;
+    background-color: #318616;
     color: #fff;
-    border: 1px solid #CC0000;
+    border: 1px solid #318616;
+    border-radius: 10px;
     font-size: 1.1rem;
-    padding: 12px 36px;
+    padding: 12px 20px;
     font-weight: 600;
-
 }
 
 .quantitySelector {
@@ -70,20 +73,15 @@ button:hover {
 @media (max-width: 565px) {
     .productPage {
         flex-direction: column;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        align-items: center;
+    }
+
+    .productImage {
+        width: 60%;
     }
 
     .productImage img {
         height: 250px;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    .productPage p {
-        font-size: 1rem;
     }
 
     .btn {
@@ -93,7 +91,10 @@ button:hover {
 
     .btn button {
         width: 80%;
-        padding: 10px;
+    }
+    
+    .productDetails {
+        width: 100%;
     }
 
     .cartBtn {

@@ -61,10 +61,11 @@ const ProductPage = () => {
                     </div>
 
                     <div className={styles.productDetails}>
-                        <h1>{product.name}</h1>
-                        <p>{product.description}</p>
-                        <p className={styles.productPrice}>Price: ₹{product.price.toFixed(2)}</p>
-                        <p className={styles.quantity}>{product.quantity}</p>
+                        <h2 className={styles.productName}>{product.name}</h2>
+                        <p className={styles.productDescription}>{product.description}</p>
+                        <p className={styles.productCapacity}>{product.quantity}</p>
+                        <p className={styles.productPrice}>Price: ₹{product.price}</p>
+                        <p className={styles.inclusiveLine}>(inclusive of all taxes)</p>
                         <button className={styles.cartBtn} onClick={() => addToCart(product)}>Add to Cart</button>
                     </div>
                 </>
