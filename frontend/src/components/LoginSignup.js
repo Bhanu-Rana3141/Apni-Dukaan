@@ -1,15 +1,15 @@
 import React, { useState, useContext } from 'react';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import styles from './LoginSignup.module.css';
 import { AuthContext } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import axios from 'axios';
 
 export default function Login() {
 
-  const { login } = useContext(AuthContext); // Destructuring login from AuthContext
+  const { login } = useContext(AuthContext); 
   const [formType, setFormType] = useState("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  // toggle login and sign up form   
+  // toggle login to sign up form   
   const toggleLoginSignup = () => {
     setFormType("sign up");
   }
@@ -81,8 +81,8 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      login(response.data.token); // Using login function from AuthContext
+      const response = await axios.post('/api/auth/login', { email, password });
+      login(response.data.token); // sending token as parameter to login function in AuthProvider
       toast.success("Login successfull!");
       navigate('/');
     }
@@ -101,7 +101,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
+      const response = await axios.post('/api/auth/signup', { name, email, password });
       login(response.data.token);
       toast.success("Registered successfully!");
       navigate('/');
@@ -120,7 +120,8 @@ export default function Login() {
             <input
               type="Email"
               placeholder='Enter email address '
-              required value={email}
+              required 
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             {/* show or hide password */}
@@ -128,7 +129,8 @@ export default function Login() {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder='Enter password'
-                required value={password}
+                required 
+                value={password}
                 onChange={(e) => setPasssword(e.target.value)}
               />
               <span onClick={togglePasswordVisibility} className={styles.eyeIcon}>
@@ -138,6 +140,7 @@ export default function Login() {
             <button className={styles.loginButton} onClick={handleLogin}>Log in</button>
             <p className={styles.dontHaveAccountPara}>Don't have an account ? <span className={styles.links} onClick={toggleLoginSignup}> Sign up</span></p>
           </div>
+
           // Below code is for sign up
         ) : (
           <div className={styles.form}>

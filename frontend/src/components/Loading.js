@@ -1,10 +1,10 @@
 import React from 'react';
-import './Loading.css'; // Make sure this file is imported
+import styles from './Loading.module.css'
 
 export default function Loading() {
     return (
-        <div className="loading-card">
-            <div className="loading-spinner"></div>
+        <div className={styles.loadingCard}>
+            <div className={styles.loadingSpinner}></div>
             <p>This may take few seconds.</p>
         </div>
     );

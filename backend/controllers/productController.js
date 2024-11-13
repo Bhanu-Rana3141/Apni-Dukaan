@@ -1,7 +1,6 @@
 const Product = require('../models/productModel');
 const Category = require('../models/categoryModel');
 
-// Fetch all products
 const getAllProducts = async (req, res) => {
     try {
         const products = await Product.find({});
@@ -11,12 +10,11 @@ const getAllProducts = async (req, res) => {
     }
 };
 
-// Fetch products by category
 const getProductsByCategory = async (req, res) => {
     const { categoryName } = req.params;
 
     try {
-        // Find the category
+        // Find the category -> The $regex operator is used to perform a case-insensitive search
         const category = await Category.findOne({ name: { $regex: new RegExp(`^${categoryName}$`, 'i') } });
         if (!category) {
             return res.status(404).json({ message: 'Category not found' });
@@ -43,7 +41,7 @@ const getProductsBySubcategory = async (req, res) => {
         // Find products in this category and subcategory
         const products = await Product.find({ 
             category: category._id, 
-            subcategory: { $regex: new RegExp(`^${subcategoryName}$`, 'i') } // Assuming subcategory is a field in Product
+            subcategory: { $regex: new RegExp(`^${subcategoryName}$`, 'i') } 
         });
         
         res.status(200).json(products);

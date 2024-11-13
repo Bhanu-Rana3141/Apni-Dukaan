@@ -13,7 +13,7 @@ const ProductPage = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/products/${id}`); 
+                const response = await axios.get(`/api/products/${id}`); 
                 setProduct(response.data);
             } catch (error) {
                 console.log('Failed to fetch product:', error);
@@ -57,7 +57,7 @@ const ProductPage = () => {
             {product ? (
                 <>
                     <div className={styles.productImage}>
-                        <img src={`http://localhost:5000/images/${product.image}`} alt={product.name} />
+                        <img src={`/images/${product.image}`} alt={product.name} />
                     </div>
 
                     <div className={styles.productDetails}>
@@ -70,7 +70,7 @@ const ProductPage = () => {
                     </div>
                 </>
             ) : (
-                <p>Loading product details...</p>
+                <p>Product not found</p>
             )}
         </div>
     );

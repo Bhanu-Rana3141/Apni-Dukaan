@@ -19,6 +19,8 @@ a {
     height: 60px;
 }
 
+/* search bar */
+
 .searchParent {
     display: flex;
     width: 40%;
@@ -40,6 +42,8 @@ a {
     top: 12px;
 }
 
+/* navlinks */
+
 .navLinks {
     width: 30%;
     display: flex;
@@ -52,12 +56,6 @@ a {
     font-weight: 500;
 }
 
-.profile-icon {
-    border: 2px solid black;
-    border-radius: 50%; 
-    padding: 5px;   
-}
-
 .cartText {
     position: relative;
     bottom: 6px;
@@ -66,6 +64,8 @@ a {
 .cartIcon {
     height: 30px;
 }
+
+/* login button */
 
 .loginButton {
     padding: 10px 24px;
@@ -77,6 +77,8 @@ a {
     font-weight: 550;
     color: #555555;
 }
+
+/* menu */
 
 .hamburgerIcon {
     display: none;

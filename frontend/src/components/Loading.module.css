@@ -1,4 +1,4 @@
-.loading-card {
+.loadingCard {
     position: fixed; 
     top: 0; 
     left: 0;
@@ -13,7 +13,7 @@
     z-index: 1000; 
 }
 
-.loading-spinner {
+.loadingSpinner {
     border: 3px solid rgba(0, 0, 0, 0.1);
     border-left-color: #E97862; 
     border-radius: 50%; 
@@ -25,9 +25,9 @@
 
 @keyframes spin {
     0% {
-        transform: rotate(0deg); /* Start at 0 degrees */
+        transform: rotate(0deg); 
     }
     100% {
-        transform: rotate(360deg); /* Rotate to 360 degrees */
+        transform: rotate(360deg);
     }
 }

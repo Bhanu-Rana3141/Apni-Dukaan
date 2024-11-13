@@ -30,6 +30,9 @@ hr {
 
 .cartList {
     width: 65%;
+    position: absolute;
+    left:0;
+    margin-left: 12px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.162);
@@ -90,6 +93,10 @@ select {
 
 .priceDetails {
     width: 25%;
+    position: fixed;
+    top: 66px;
+    right: 0;
+    margin-right: 12px;
     height: 340px;
     background-color: #fff;
     border-radius: 8px;
@@ -134,9 +141,10 @@ select {
     outline: none;
     border-radius: 20px;
     padding: 8px 30px;
-    background-color: rgb(255, 213, 0);
+    background-color: rgba(255, 166, 0, 0.927);
     border: 1px solid #FF9F00;
     margin-top: 20px;
+    font-size: 1rem;
 }
 
 @media(max-width : 928px) {

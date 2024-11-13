@@ -1,20 +1,23 @@
 const User = require("../models/userModel");
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const generateToken = require("../config/generateToken");
 const { signupSchema } = require('../validations/validation');
 
 
-// Register user
+/* Registers a new user after validating input data and checking if the user already exists.
+ * Validates the request body using the signup schema.
+ * Checks if all required fields are provided.
+ * Checks if the user already exists.
+ * Creates a new user and triggers password hashing.
+ * Returns a success response with user details and a JWT token if the user is created.
+*/
 const signup = async (req, res) => {
 
-    // Validate request body
+    // Validate request body 
     const { error } = signupSchema.validate(req.body);
-    
     if (error) {
         return res.status(400).json({ message: error.details[0].message });
     }
-
+    
     const { name, email, password } = req.body;
 
     try {
@@ -52,7 +55,12 @@ const signup = async (req, res) => {
     }
 };
 
-// Authenticate user (login)
+/* Authenticates a user by verifying their credentials (email and password).
+ * Validates the login credentials against the database.
+ * Checks if the user exists and compares the provided password with the stored hashed password.
+ * Returns a JWT token and user details on successful login.
+ * Returns an error message if the credentials are invalid.
+*/
 const login = async (req, res) => {
 
     const { email, password } = req.body;

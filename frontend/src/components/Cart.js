@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './Cart.module.css';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCartItems = async () => {
@@ -55,8 +57,12 @@ export default function Cart() {
   };
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.productId.price * item.quantity, 0).toFixed(2);
+    return cartItems.reduce((total, item) => total + item.productId.price * item.quantity, 0);
   };
+
+  const handleClick = () => {
+    navigate('/checkout');
+  }
 
   return (
     <>
@@ -78,7 +84,7 @@ export default function Cart() {
                     <div className={styles.itemDetails}>
                       <p className={styles.productName}>{item.productId.name}</p>
                       <p className={styles.productDescription}>{item.productId.description}</p>
-                      <p className={styles.productPrice}>Price: ₹{item.productId.price.toFixed(2)}</p>
+                      <p className={styles.productPrice}>Price: ₹{item.productId.price}</p>
                       <p>
                         <select
                           value={item.quantity}
@@ -127,7 +133,7 @@ export default function Cart() {
               </div>
 
               <div className={styles.proceedToBuyBtn}>
-                <button className={styles.proceedButton}>Proceed to Buy</button>
+                <button onClick={handleClick} className={styles.proceedButton}>Proceed to Buy</button>
               </div>
             </div>
 

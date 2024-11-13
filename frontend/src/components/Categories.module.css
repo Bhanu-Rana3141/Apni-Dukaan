@@ -5,6 +5,7 @@
     text-align: center;
 }
 
+/* error image */
 .error {
     width: 100%;
     height: auto;
@@ -15,7 +16,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .categoriesItem {

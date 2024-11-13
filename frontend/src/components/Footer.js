@@ -6,6 +6,7 @@ export default function Footer() {
 
     const location = useLocation();
 
+    // Scrolls to the top of the page if the user clicks "Home" while already on the home page.
     const handleHomeClick = () => {
         if (location.pathname === "/") {
             window.scrollTo({
@@ -14,7 +15,7 @@ export default function Footer() {
         }
     };
 
-  return (
+    return (
     <>
         <div className={styles.footer}>
             

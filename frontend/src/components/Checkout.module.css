@@ -1,0 +1,28 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;    
+    border-bottom: 1px solid none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.123);
+}
+
+.logo {
+    height: 60px;
+    margin-left: 20px;
+}
+
+.checkoutContainer {
+    width: 100%;
+    height: 100%;
+    margin-top: 90px;
+}
+
+.deliveryAddress {
+    margin-left: 15px;
+    width: 68%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.162);
+}

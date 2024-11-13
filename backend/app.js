@@ -4,14 +4,14 @@ const connectDB = require('./config/db');
 const path = require('path');
 const app = express();
 
-// Load environment variables
+// environment variables from the .env file are loaded into process.env.
 require('dotenv').config();
 
-// connect to database
+// function is called to connect with database
 connectDB();
 
-// Middleware
-app.use(express.json());
+// Middleware 
+app.use(express.json()); // parses request (req.body)
 app.use(cors());
 
 // Serve static files

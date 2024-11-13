@@ -3,6 +3,7 @@ import axios from 'axios';
 import styles from './AllProducts.module.css';  
 
 export default function AllProducts() {
+    
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
