@@ -3,7 +3,7 @@ import styles from './DeliveryAddress.module.css'
 import { toast } from 'react-toastify';
 import axios from 'axios'
 
-export default function DeliveryAddress() {
+export default function DeliveryAddress({ setSavedAddress }) {
 
     const [isFormVisible, setFormVisible] = useState(false);
     const [formData, setFormData] = useState({
@@ -14,7 +14,7 @@ export default function DeliveryAddress() {
         state: '',
         pincode: ''
     });
-    const [savedAddress, setSavedAddress] = useState(null); // To store the fetched address - object
+    const [savedAddress, setAddress] = useState(null); // To store the fetched address - object
 
     // Fetch saved address when the component loads
     useEffect(() => {
@@ -28,7 +28,8 @@ export default function DeliveryAddress() {
                 const fetchedAddress = response.data.address;
 
                 if (fetchedAddress) {
-                    setSavedAddress(fetchedAddress);
+                    setAddress(fetchedAddress);
+                    setSavedAddress(fetchedAddress); // Update parent state
                     setFormData(fetchedAddress); // Pre-fill the form with the saved address
                 }
             } catch (error) {
@@ -36,7 +37,7 @@ export default function DeliveryAddress() {
             }
         };
         fetchAddress();
-    }, []);
+    }, [setSavedAddress]);
 
     // Toggle visibility of form
     const handleAddAddressClick = () => {
@@ -76,9 +77,10 @@ export default function DeliveryAddress() {
                     }
                 );
             }
-            toast.success(response.data.message);
             setFormVisible(false);
-            setSavedAddress(response.data.address);
+            setAddress(response.data.address);
+            setSavedAddress(response.data.address); // Update parent state
+            window.location.reload();
         } catch (error) {
             console.error('Error saving address:', error.response?.data || error.message);
             toast.error('Failed to save address. Please try again.');

@@ -25,6 +25,7 @@ export const AuthProvider = ({ children }) => {
         if (token) {
             try {
                 const decoded = jwt_decode(token);
+                console.log('Decoded token:', decoded);
                 setAuthState({
                     token,
                     user: decoded, 

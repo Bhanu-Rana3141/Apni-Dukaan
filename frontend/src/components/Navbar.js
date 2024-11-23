@@ -9,7 +9,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faMagnifyingGlass , faXmark} from '@fortawesome/free-solid-svg-icons';
 
-export default function Navbar() {
+export default function Navbar({ searchQuery, handleSearch }) {
 
     // Destructuring authState(contains token and user) and logout function from AuthContext
     const { authState, logout } = useContext(AuthContext); 
@@ -70,7 +70,7 @@ export default function Navbar() {
             {/* search bar */}
             <div className={styles.searchParent}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.searchIcon} />
-                <input className={styles.searchBar} type="text" placeholder='Search Products' onClick={handleSearchClick}/>
+                <input className={styles.searchBar} type="text" placeholder='Search Products' onClick={handleSearchClick} onChange={(e) => handleSearch(e.target.value)} /> 
             </div>
 
             {/* navlinks */}
@@ -91,7 +91,6 @@ export default function Navbar() {
                             <div className={styles.dropdown}>
                                 <p className={styles.welcomeText}>Hello, {authState.user.name}!</p>
                                 <Link to="/profile" className={styles.dropdownLink}>My Profile</Link>
-                                <Link to="/orders" className={styles.dropdownLink}>My Orders</Link>
                                 <button className={styles.logoutButton} onClick={handleLogout}>Log Out</button>
                             </div>
                         )}

@@ -16,3 +16,21 @@
     height: 100%;
     margin-top: 90px;
 }
+
+.orderSummary, .paymentOptions {
+    margin-top: 15px;
+    width: 68%;
+    margin-left: 15px;
+    border: 1px solid #87878750;
+    border-radius: 8px;
+}
+
+.orderSummary h3 {
+    font-size: 1rem;
+    margin-left: 35px;
+}
+
+.paymentOptions h3 {
+    font-size: 1rem;
+    margin-left: 35px;
+}

@@ -6,10 +6,11 @@ import { ToastContainer } from 'react-toastify';
 import Loading from './components/Loading.js';
 import ScrollToTop from './components/ScrollToTop.js';
 import ProtectedRoute from './components/ProtectedRoute.js';
+import LoginSignup from './components/LoginSignup.js';
 import Navbar from './components/Navbar.js';
+import Profile from './components/Profile.js';
 import AllProducts from './components/AllProducts.js';
 import Footer from './components/Footer.js';
-import LoginSignup from './components/LoginSignup.js';
 import Home from './components/Home.js';
 import Categories from './components/Categories.js';
 import Products from './components/Products.js';
@@ -41,7 +42,13 @@ function App() {
   const showNavbar = location.pathname !== '/checkout';
 
   // Defining routes where footer should not be displayed
-  const notShowFooter =  ['/cart', '/checkout'];
+  const notShowFooter =  ['/cart', '/checkout', '/allproducts/search', '/profile'];
+
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+      setSearchQuery(query);  // Update search query
+  };
 
   return (
     <>
@@ -58,12 +65,13 @@ function App() {
       />
       <ScrollToTop/>
       {loading && <Loading />}
-      {showNavbar && <Navbar/>}
+      {showNavbar && <Navbar searchQuery={searchQuery} handleSearch={handleSearch} />}
 
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<LoginSignup/>}></Route>
-        <Route path="/allproducts/search" element={<AllProducts />} />
+        <Route path='/profile' element={<Profile/>}></Route>
+        <Route path="/allproducts/search" element={<AllProducts searchQuery={searchQuery} handleSearch={handleSearch} />}  />
         <Route path='/categories' element={<Categories/>}></Route>
         <Route path='/:categoryName/products' element={<Products/>}></Route>
         <Route path='/:categoryName/products/:subcategoryName' element={<Products/>}></Route>

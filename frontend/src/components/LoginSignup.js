@@ -15,6 +15,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPasssword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('');
   const navigate = useNavigate();
 
   // toggle login to sign up form   
@@ -67,6 +68,9 @@ export default function Login() {
         toast.error("Password must be at least 8 characters long.");
         return false;
       }
+      // if(!phoneNumber) {
+      //   toast.error("Please fill the phone number.");
+      // }
     }
     return true;
   }
@@ -101,7 +105,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post('/api/auth/signup', { name, email, password });
+      const response = await axios.post('/api/auth/signup', { name, email, password, phoneNumber });
       login(response.data.token);
       toast.success("Registered successfully!");
       navigate('/');
@@ -170,6 +174,12 @@ export default function Login() {
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>
             </div>
+            <input
+                type="text"
+                placeholder="Phone Number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+            />
             <button className={styles.loginButton} onClick={handleSignup}>Sign up</button>
           </div>
         )}
