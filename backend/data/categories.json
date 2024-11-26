@@ -7,12 +7,12 @@
     {
         "name": "Snacks",
         "image": "categories/snacks.png",
-        "subcategories": ["Chips & Kurkure", "Bhujiya & Namkeen", "Others"]
+        "subcategories": ["Chips", "kurkure", "Namkeen Snacks"]
     },
     { 
         "name": "Bakery", 
         "image": "categories/bakery.jpeg",
-        "subcategories": []
+        "subcategories": ["Biscuits", "Rusk"]
     },
     {
         "name": "Stationery",

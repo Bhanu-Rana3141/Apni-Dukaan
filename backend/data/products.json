@@ -36,8 +36,8 @@
         "image": "products/beverages/coca_cola_750ml.webp"
     },
     {
-        "name": "Limca-Lime \"N\" Lemon Soft Drink (2L)",
-        "description": "Tangy Limca Lime \"N\" Lemon soft drink in a 2-liter bottle.",
+        "name": "Limca-Lime Lemon Soft Drink (2L)",
+        "description": "Tangy Limca Lime Lemon soft drink in a 2-liter bottle.",
         "price": 90,
         "quantity": "2 L",
         "category": "Beverages",
@@ -63,8 +63,8 @@
         "image": "products/beverages/coca_cola_250ml.webp"
     },
     {
-        "name": "Limca-Lime \"N\" Lemon Soft Drink (250 ml)",
-        "description": "Tangy Limca Lime \"N\" Lemon soft drink in a 250 ml bottle.",
+        "name": "Limca-Lime Lemon Soft Drink (250 ml)",
+        "description": "Tangy Limca Lime Lemon soft drink in a 250 ml bottle.",
         "price": 20,
         "quantity": "250 ml",
         "category": "Beverages",
@@ -295,5 +295,151 @@
         "category": "Beverages",
         "subcategory": "Soda & Water",
         "image": "products/beverages/lohori_zeera_160ml.avif"
+    },
+    {
+        "name": "Uncle Chips",
+        "description": "Uncle Chipps Spicy Treat Flavour Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/uncle_chips.avif"
+    },
+    {
+        "name": "Masala Potato Chips",
+        "description": "Lay's India's Magic Masala Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/masala_lays.avif"
+    },
+    {
+        "name": "Hot n Sweet Chips",
+        "description": "Hot n Sweet Chilli Flavour Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/red_chilli_lays.avif"
+    },
+    {
+        "name": "Limon Flavour Potato Chips",
+        "description": "Lay's Chile Limon Flavour Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/green_chilli_lays.avif"
+    },
+    {
+        "name": "Onion Potato Chips",
+        "description": "Cream & Onion Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/onion_chips.avif"
+    },
+    {
+        "name": "Crispz Herb & Onion Potato Chips",
+        "description": "Lay's Crispz Herb & Onion Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/crispz_herb.avif"
+    },
+    {
+        "name": "Tomato Chips",
+        "description": "Tomato Tango Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/red_tomato_chips.avif"
+    },
+    {
+        "name": "Salted Chips",
+        "description": "Classic Salted Potato Chips",
+        "price": 20,
+        "quantity": "48g",
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "image": "products/snacks/classic_salt_yellow_chips.avif"
+    },
+    {
+        "name": "Kurkure Masala Munch",
+        "description": "Kurkure Masala Munch Crisps",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Kurkure",
+        "image": "products/snacks/red_kurkure.jpeg"
+    },
+    {
+        "name": "Kurkure Chilli Chatka",
+        "description": "Kurkure Namkeen Chips, Chilli Chatka Flavour",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Kurkure",
+        "image": "products/snacks/chilli_chataka_kurkure.jpeg"
+    },
+    {
+        "name": "Kurkure Green Chutney",
+        "description": "Kurkure Green Chutney Flavour",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Kurkure",
+        "image": "products/snacks/green_chutney_kurkure.jpeg"
+    },
+    {
+        "name": "Kurkure Sizzling Hot",
+        "description": "Kurkure Sizzling Hot Flavour",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Kurkure",
+        "image": "products/snacks/sizzling_hot.jpeg"
+    },  
+    {
+        "name": "Bhujiya Masala",
+        "description": "Haldiram Bhujiya Masala",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Namkeen Snacks",
+        "image": "products/snacks/haldiram_bhujiya.jpg"
+    },
+    {
+        "name": "Khata Meetha",
+        "description": "Haldiram Khata Meeta",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Namkeen Snacks",
+        "image": "products/snacks/haldiram_khatta_meetha.jpg"
+    },
+    {
+        "name": "Navratan ",
+        "description": "Haldiram Navratan",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Namkeen Snacks",
+        "image": "products/snacks/haldiram_navratan.jpeg"
+    },
+    {
+        "name": "Peanuts ",
+        "description": "Haldiram Peanuts",
+        "price": 20,
+        "quantity": "75g",
+        "category": "Snacks",
+        "subcategory": "Namkeen Snacks",
+        "image": "products/snacks/haldiram_peanuts.avif"
     }
+    
+
 ]

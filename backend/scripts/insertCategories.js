@@ -11,6 +11,8 @@ const insertCategories = async () => {
     try {
         await connectDB();
 
+        await Category.deleteMany({});
+
         const result = await Category.insertMany(categories);
         console.log(`${result.length} categories inserted`);
     }

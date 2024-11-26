@@ -23,7 +23,8 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const addressRoutes = require('./routes/addressRoutes');
-const paymentRoutes = require('./routes/paymentRoutes')
+const paymentRoutes = require('./routes/paymentRoutes');
+// const orderRoutes = require('./routes/orderRoutes');
 
 // middleware
 app.use('/api/auth', authRoutes);
@@ -32,6 +33,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/address', addressRoutes);
 app.use('/api/payment', paymentRoutes);
+// app.use('/api/orders', orderRoutes);
 
 const PORT = process.env.PORT || 5000;
 

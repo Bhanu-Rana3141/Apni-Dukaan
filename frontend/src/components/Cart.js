@@ -77,9 +77,9 @@ export default function Cart({ isCheckoutView }) {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
       });
-  
+
       const { id: orderId, amount, currency } = response.data;
-  
+
       // Step 2: Initialize Razorpay Checkout
       const options = {
         key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Razorpay key ID (add to .env)
@@ -92,10 +92,10 @@ export default function Cart({ isCheckoutView }) {
           color: '#3399cc',
         },
       };
-  
+
       const razorpayInstance = new window.Razorpay(options);
       razorpayInstance.open();
-  
+
       // If payment window is closed
       razorpayInstance.on('payment.failed', (response) => {
         toast.error('Payment failed. Please try again.');
@@ -104,7 +104,7 @@ export default function Cart({ isCheckoutView }) {
       console.error('Error during payment:', error);
       toast.error('Unable to initiate payment. Please try again later.');
     }
-  };  
+  };
 
   return (
     <>

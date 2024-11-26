@@ -13,7 +13,7 @@ const insertProducts = async () => {
         console.log("mongodb connected !!");
 
         // fetch all categories
-        // await Product.deleteMany({});
+        await Product.deleteMany({});
         const categories = await Category.find({});
 
         // mapping categories name to their ObjectId
