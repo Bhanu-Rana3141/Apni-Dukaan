@@ -6,7 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function AllProducts({ searchQuery, handleSearch }) {
+export default function AllProducts({ searchQuery }) {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const navigate = useNavigate();
@@ -15,9 +15,9 @@ export default function AllProducts({ searchQuery, handleSearch }) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('/api/products'); // Assuming your products endpoint is /api/products
+                const response = await axios.get('/api/products'); 
                 setProducts(response.data);
-                setFilteredProducts(response.data);  // Initially, show all products
+                setFilteredProducts(response.data);  
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
@@ -31,7 +31,7 @@ export default function AllProducts({ searchQuery, handleSearch }) {
             setFilteredProducts(products); // If the search query is empty, show all products
         } else {
             const filtered = products.filter(product =>
-                product.name.toLowerCase().includes(searchQuery.toLowerCase()) // Case-insensitive search
+                product.name.toLowerCase().includes(searchQuery.toLowerCase())
             );
             setFilteredProducts(filtered);
         }

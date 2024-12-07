@@ -29,7 +29,7 @@ exports.getAddress = async (req, res) => {
             return res.status(404).json({ message: 'No address found for this user.' });
         }
 
-        res.status(200).json({ address }); // Return the address
+        res.status(200).json({ address }); 
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

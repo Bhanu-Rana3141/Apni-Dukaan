@@ -13,6 +13,10 @@ export default function Cart({ isCheckoutView }) {
   const navigate = useNavigate();
   const { authState } = useContext(AuthContext);
 
+  /* Fetching cart items
+   * firsly checking whether user is authorised 
+   * if yes , cart items will be fetched , else error 401 unauthorised
+  */
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
@@ -29,6 +33,7 @@ export default function Cart({ isCheckoutView }) {
     fetchCartItems();
   }, []);
 
+  // Changing quantity of products
   const handleQuantityChange = async (productId, quantity) => {
     try {
       await axios.put(`/api/cart/update`, {
@@ -45,6 +50,7 @@ export default function Cart({ isCheckoutView }) {
     }
   }
 
+  // Removing items from cart
   const handleRemoveItem = async (productId) => {
     try {
       await axios.delete(`/api/cart/remove`, {
@@ -61,7 +67,7 @@ export default function Cart({ isCheckoutView }) {
   };
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.productId.price * item.quantity, 0);
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   const handleClick = () => {
@@ -82,12 +88,12 @@ export default function Cart({ isCheckoutView }) {
 
       // Step 2: Initialize Razorpay Checkout
       const options = {
-        key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Razorpay key ID (add to .env)
-        amount: amount, // Amount in paise
+        key: process.env.REACT_APP_RAZORPAY_KEY_ID,
+        amount: amount,
         currency: currency,
         name: 'BPS Dukaan',
         description: 'Thank you for shopping with us.',
-        order_id: orderId, // Pass order ID generated from backend
+        order_id: orderId, 
         theme: {
           color: '#3399cc',
         },

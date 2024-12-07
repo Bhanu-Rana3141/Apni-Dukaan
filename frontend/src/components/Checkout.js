@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Checkout.module.css'
+import { Link } from 'react-router-dom'
 import DeliveryAddress from './DeliveryAddress'
 import Cart from './Cart'
 
@@ -7,31 +8,19 @@ export default function Checkout() {
 
   const [savedAddress, setSavedAddress] = useState(null);
 
-
-  // const customCartStyles = {
-  //   container: {
-  //     marginTop: '10px', // Remove margin from top
-  //   },
-  //   heading: {
-  //     fontSize: '1rem', // Font size for "2. Order Summary"
-  //     color: '#878787', // Font color for heading
-  //   },
-  //   headingText: '2. ORDER SUMMARY', // Custom text for heading
-  // };
-
   return (
 
     <>
       <div className={styles.navbar}>
+        <Link to='/' className={styles.homeLink}>Back to Home</Link>
         <h2 className={styles.heading}>Checkout</h2>
       </div>
-
 
       {/*
         1. Delivery Address 
         2. Cart Items
         3. Payment Options
-        */}
+      */}
       <div className={styles.checkoutContainer}>
         <div className={styles.leftPart}>
             <DeliveryAddress setSavedAddress={setSavedAddress}/>

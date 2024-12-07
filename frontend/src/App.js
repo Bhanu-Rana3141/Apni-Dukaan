@@ -18,7 +18,6 @@ import ProductPage from './components/ProductPage.js';
 import Cart from './components/Cart.js';
 import Checkout from './components/Checkout.js';
 
-
 function App() {
 
   const [loading, setLoading] = useState(false);

@@ -439,7 +439,86 @@
         "category": "Snacks",
         "subcategory": "Namkeen Snacks",
         "image": "products/snacks/haldiram_peanuts.avif"
+    },
+    {
+        "name": "Bounce Biscuit ",
+        "description": "Sunfeast Bounce Chocolate Cream Biscuit",
+        "price": 5,
+        "quantity": "40g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/bounce_black.jpeg"
+    },
+    {
+        "name": "Bounce Biscuit ",
+        "description": "Sunfeast Bounce Orange Cream Biscuit",
+        "price": 5,
+        "quantity": "40g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/bounce.jpeg"
+    },
+    {
+        "name": "Bounce Biscuit ",
+        "description": "Sunfeast Bounce Elaichi Cream Biscuit",
+        "price": 5,
+        "quantity": "40g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/bounce_green.jpeg"
+    },
+    {
+        "name": "Britannia Good Day Butter",
+        "description": "Britannia Good Day Butter Cookies",
+        "price": 10,
+        "quantity": "40g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/goodday.jpeg"
+    },
+    {
+        "name": "Britannia Good Day Cashew ",
+        "description": "Britannia Good Day Cashew Cookies",
+        "price": 10,
+        "quantity": "40g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/goodday_cashew.jpg"
+    },
+    {
+        "name": "Cadbury Oreo Biscuit",
+        "description": "Cadbury Oreo Biscuit Chocolate Flavour Cream Sandwich",
+        "price": 10,
+        "quantity": "43.75g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/oreo.jpeg"
+    },
+    {
+        "name": "PARLE G",
+        "description": "Parle -G Original Glucose Biscuits",
+        "price": 10,
+        "quantity": "100g",
+        "category": "Bakery",
+        "subcategory": "Biscuits",
+        "image": "products/bakery/parle_g.jpeg"
+    },
+    {
+        "name": "Parle Rusk",
+        "description": "Parle Rusk, Elaichi",
+        "price": 20,
+        "quantity": "100g",
+        "category": "Bakery",
+        "subcategory": "Rusk",
+        "image": "products/bakery/elaichi_rusk.jpeg"
+    },
+    {
+        "name": "Parle Rusk",
+        "description": "Parle Crunchy Rusk",
+        "price": 20,
+        "quantity": "100g",
+        "category": "Bakery",
+        "subcategory": "Rusk",
+        "image": "products/bakery/elaichi_rusk.jpeg"
     }
-    
-
 ]

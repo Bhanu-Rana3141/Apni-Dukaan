@@ -57,9 +57,9 @@ button:hover {
 }
 
 .cartBtn {
-    background-color: #318616;
+    background-color: #FF9F00;
     color: #fff;
-    border: 1px solid #318616;
+    border: 1px solid #FF9F00;
     border-radius: 10px;
     font-size: 1.1rem;
     padding: 12px 20px;
@@ -69,6 +69,61 @@ button:hover {
 .quantitySelector {
     margin-top: 20px;
 }
+
+.reviewBtn {
+    margin-left: 10px;
+    border: 1px solid #FB641B;
+    background-color: #FB641B;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+.reviewForm {
+    margin-top: 20px;
+}
+
+.submitBtn {
+    border: 1px solid #FB641B;
+    background-color: #FB641B;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 8px 8px;
+    font-weight: 600;
+}
+
+.reviewsSection {
+    margin-left: 100px;
+    margin-bottom: 40px;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.265);
+    border-radius: 20px;
+}
+
+.review {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid rgba(128, 128, 128, 0.265);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.reviewInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.name, .date {
+    font-size: 14px;
+    color: #878787;
+}
+
+
 
 @media (max-width: 565px) {
     .productPage {

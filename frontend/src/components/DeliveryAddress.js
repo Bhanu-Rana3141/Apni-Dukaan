@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios'
 
 export default function DeliveryAddress({ setSavedAddress }) {
-
+    
     const [isFormVisible, setFormVisible] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -29,7 +29,7 @@ export default function DeliveryAddress({ setSavedAddress }) {
 
                 if (fetchedAddress) {
                     setAddress(fetchedAddress);
-                    setSavedAddress(fetchedAddress); // Update parent state
+                    setSavedAddress(fetchedAddress); // Updating parent state
                     setFormData(fetchedAddress); // Pre-fill the form with the saved address
                 }
             } catch (error) {
@@ -44,8 +44,8 @@ export default function DeliveryAddress({ setSavedAddress }) {
         setFormVisible(!isFormVisible);
     };
 
+    // Update form data as user types
     const handleInputChange = (e) => {
-        // Update form data as user types
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
