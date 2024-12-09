@@ -7,6 +7,6 @@ const router = express.Router();
 router.post('/order', createOrder);
 
 // Route to verify payment
-router.post('/verify', verifyPayment);
+// router.post('/verify', verifyPayment);
 
 module.exports = router;

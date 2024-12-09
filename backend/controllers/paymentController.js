@@ -1,6 +1,5 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
-const Order = require('../models/OrderModel'); // Import Order model
 require('dotenv').config();
 
 // Initialize Razorpay instance
@@ -33,40 +32,40 @@ exports.createOrder = async (req, res) => {
 };
 
 // Verify Razorpay signature
-exports.verifyPayment = async (req, res) => {
-    const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+// exports.verifyPayment = async (req, res) => {
+//     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
-    if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
-        return res.status(400).json({ error: 'Missing payment details' });
-    }
+//     if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
+//         return res.status(400).json({ error: 'Missing payment details' });
+//     }
 
-    try {
-        const generated_signature = crypto
-            .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
-            .update(`${razorpay_order_id}|${razorpay_payment_id}`)
-            .digest('hex');
+//     try {
+//         const generated_signature = crypto
+//             .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+//             .update(`${razorpay_order_id}|${razorpay_payment_id}`)
+//             .digest('hex');
 
-        if (generated_signature === razorpay_signature) {
-            // Save payment details to database
-            const updatedOrder = await Order.findOneAndUpdate(
-                { _id: razorpay_order_id }, // Assuming you store order IDs in the database
-                {
-                    paymentStatus: 'Paid',
-                    transactionId: razorpay_payment_id,
-                },
-                { new: true }
-            );
+//         if (generated_signature === razorpay_signature) {
+//             // Save payment details to database
+//             const updatedOrder = await Order.findOneAndUpdate(
+//                 { _id: razorpay_order_id }, // Assuming you store order IDs in the database
+//                 {
+//                     paymentStatus: 'Paid',
+//                     transactionId: razorpay_payment_id,
+//                 },
+//                 { new: true }
+//             );
 
-            if (!updatedOrder) {
-                return res.status(404).json({ error: 'Order not found' });
-            }
+//             if (!updatedOrder) {
+//                 return res.status(404).json({ error: 'Order not found' });
+//             }
 
-            res.status(200).json({ message: 'Payment verified successfully', order: updatedOrder });
-        } else {
-            res.status(400).json({ error: 'Payment verification failed' });
-        }
-    } catch (error) {
-        console.error('Error verifying payment:', error);
-        res.status(500).json({ error: 'Error verifying payment' });
-    }
-};
+//             res.status(200).json({ message: 'Payment verified successfully', order: updatedOrder });
+//         } else {
+//             res.status(400).json({ error: 'Payment verification failed' });
+//         }
+//     } catch (error) {
+//         console.error('Error verifying payment:', error);
+//         res.status(500).json({ error: 'Error verifying payment' });
+//     }
+// };

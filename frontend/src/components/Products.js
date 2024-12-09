@@ -20,7 +20,7 @@ const Products = () => {
 
     // Fetch products when categoryName or subcategoryName changes
     useEffect(() => {
-        fetchProducts(); 
+        fetchProducts();
     }, [categoryName, subcategoryName]);
 
     /* Fetch all categories to set subcategories
@@ -33,14 +33,14 @@ const Products = () => {
     */
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('/api/categories'); 
+            const response = await axios.get('/api/categories');
             setCategories(response.data);
             const category = response.data.find(category => category.name.toLowerCase() === categoryName.toLowerCase());
             if (category) {
-                setSubcategories(category.subcategories); 
+                setSubcategories(category.subcategories);
             } else {
                 console.error('Category not found:', categoryName);
-                setSubcategories([]); 
+                setSubcategories([]);
             }
         } catch (error) {
             console.error('Error fetching categories:', error);
@@ -68,9 +68,10 @@ const Products = () => {
         const token = localStorage.getItem('token');
         if (!token) {
             toast.error("Please log in to add items to the cart.");
-            navigate('/login'); 
+            navigate('/login');
             return;
         }
+
         try {
             const response = await axios.post('/api/cart/add', {
                 productId: product._id,
@@ -80,14 +81,20 @@ const Products = () => {
                 price: product.price,
                 quantity: 1,
             },
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
             toast.success(response.data.message || "Product added to cart successfully!");
         } catch (error) {
-            toast.error("Failed to add product to cart.");
+            toast("You can only add up to 10 items for this product.", {
+                position: "top-center",
+                style: {
+                    backgroundColor: "#333",
+                    color: "#fff",
+                },
+            });
         }
     };
 
@@ -99,10 +106,10 @@ const Products = () => {
                 <ul className={styles.subcategoriesList}>
                     {subcategories.length > 0 ? (
                         subcategories.map((sub) => (
-                            <li 
-                                key={sub} 
+                            <li
+                                key={sub}
                                 onClick={() => navigate(`/${categoryName}/products/${sub}`)}
-                                className={styles.subcategories} 
+                                className={styles.subcategories}
                             >
                                 {sub}
                             </li>
@@ -112,9 +119,9 @@ const Products = () => {
                     )}
                 </ul>
             </div>
-            
+
             {/* products */}
-            <div className={styles.products}> 
+            <div className={styles.products}>
                 {products.length === 0 ? (
                     <p>No products available.</p>
                 ) : (

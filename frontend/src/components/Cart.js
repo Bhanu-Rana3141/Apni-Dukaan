@@ -35,6 +35,16 @@ export default function Cart({ isCheckoutView }) {
 
   // Changing quantity of products
   const handleQuantityChange = async (productId, quantity) => {
+    if(quantity > 10) {
+      toast("We only accept orders for a maximum of 10 items.", {
+        position: "top-center",
+        style: {
+          backgroundColor: "#333", 
+          color: "#fff",           
+        },
+      });
+      return;
+    }
     try {
       await axios.put(`/api/cart/update`, {
         productId,

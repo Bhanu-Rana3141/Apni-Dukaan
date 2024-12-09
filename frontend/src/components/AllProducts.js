@@ -61,7 +61,13 @@ export default function AllProducts({ searchQuery }) {
             });
             toast.success(response.data.message || "Product added to cart successfully!");
         } catch (error) {
-            toast.error("Failed to add product to cart.");
+            toast("You can only add up to 10 items for this product.", {
+                position: "top-center",
+                style: {
+                    backgroundColor: "#333",
+                    color: "#fff",
+                },
+            });
         }
     };
 

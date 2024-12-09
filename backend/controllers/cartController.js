@@ -14,6 +14,9 @@ exports.addToCart = async (req, res) => {
         const existingProduct = cart.products.find(item => item.productId.toString() === productId);
 
         if (existingProduct) {
+            if (existingProduct.quantity + quantity > 10) {
+                return res.status(400).json({ message: "You can only add up to 10 items for this product." });
+            }
             existingProduct.quantity += quantity;
         } else {
             cart.products.push({ productId, name, description, image, price, quantity });
