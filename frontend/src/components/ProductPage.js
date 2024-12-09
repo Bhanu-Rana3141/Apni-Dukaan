@@ -97,7 +97,13 @@ const ProductPage = () => {
                 toast.error("Please enter your review.")
             }
         } catch (error) {
-            toast.error("Failed to submit review.");
+            toast('You have already submitted a review for this product.', {
+                position: "top-center",
+                style: {
+                    backgroundColor: "#333",
+                    color: "#fff",
+                },
+            });
         }
     };
 
