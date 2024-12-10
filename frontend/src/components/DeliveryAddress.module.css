@@ -72,3 +72,30 @@ textarea {
     font-size: 14px;
     line-height: 15px;
 }
+
+@media(max-width: 342px) {
+    .addBtn {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .heading {
+        font-size: 12px;
+    }
+
+    .addressForm input {
+        font-size: 12px;
+    }
+}
+
+@media(max-width : 305px) {
+
+    .headingAndButton {
+        flex-direction: column;
+    }
+
+    .addressForm input, textarea {
+        padding: 2px;
+        width: 50%;
+    }
+}

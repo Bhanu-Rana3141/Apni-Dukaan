@@ -10,11 +10,12 @@
     width: 90%;
     padding: 10px;
     margin: 10px; 
-    margin-left: 50px;
+    margin-left: 40px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.162);
     margin-bottom: 30px;
+    border: 1px solid grey;
 }
 
 .orderContainer:hover {
@@ -34,9 +35,6 @@
     
 }
 
-.order:hover {
-}
-
 .order img {
     width: 155px;
     height: 130px;
@@ -45,7 +43,7 @@
 
 .imageAndName {
     display: flex;
-    width: 50%;
+    width: 40%;
 }
 
 .order p {
@@ -66,4 +64,31 @@
 .totalAmount {
     text-align: end;
     font-weight: 600;
+}
+
+@media(max-width : 560px) {
+    .orderContainer {
+        margin-left: 5px;
+    }
+}
+
+@media(max-width : 516px) {
+    .order p {
+        font-size: 12px;
+    }
+}
+
+@media(max-width : 436px) {
+    .order {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .imageAndName {
+        flex-direction: column;
+    }
+
+    .totalAmount {
+        text-align: center;
+    }
 }

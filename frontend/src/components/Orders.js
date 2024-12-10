@@ -40,7 +40,7 @@ const Orders = () => {
                                     <p>{product.productId.quantity}</p>
                                     <p>₹{product.price}</p>
                                     <p>quantity: {product.quantity}</p>
-                                    <p>₹{product.price * product.quantity}</p>
+                                    <p className={styles.calculatedPrice}>₹{product.price * product.quantity}</p>
                                 </div>
                             ))}
                             

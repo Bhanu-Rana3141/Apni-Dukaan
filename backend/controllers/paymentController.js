@@ -3,6 +3,7 @@ const crypto = require('crypto');
 require('dotenv').config();
 const Order = require('../models/orderModel');
 const Cart = require('../models/CartModel');
+const nodemailer = require('nodemailer');
 
 // Initialize Razorpay instance
 const razorpay = new Razorpay({
@@ -31,6 +32,33 @@ exports.createOrder = async (req, res) => {
         console.error('Error creating Razorpay order:', error);
         res.status(500).json({ error: 'Error creating Razorpay order' });
     }
+};
+
+// Email setup
+const transporter = nodemailer.createTransport({
+    service: 'gmail', // Use your email provider here (e.g., Gmail, SendGrid, etc.)
+    auth: {
+        user: process.env.EMAIL_USER, // your email address
+        pass: process.env.EMAIL_PASS, // your email password or API key (if using SendGrid or others)
+    },
+});
+
+// Helper function to send an email
+const sendOrderConfirmationEmail = (userEmail, order) => {
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: userEmail,
+        subject: `Order Confirmation - Order ID: ${order._id}`,
+        text: `Thank you for your order!\n\nYour order has been successfully placed. Below are the details:\n\nOrder ID: ${order._id}\nTotal Amount: ₹${order.totalAmount}\n\nOrder Details:\n${order.products.map((item) => `${item.productId.name} x ${item.quantity}`).join('\n')}\n\nThank you for shopping with us!`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
 };
 
 // Verify Razorpay signature
@@ -69,11 +97,14 @@ exports.verifyPayment = async (req, res) => {
     
             // Clear the user's cart after saving the order
             await Cart.deleteOne({ userId: req.user.id });
-    
+            
+            // Send email after order is successfully placed
+            const user = req.user; // Assuming user details are available in req.user
+            sendOrderConfirmationEmail(user.email, order); // Send order confirmation email to the user
+
             res.status(200).json({
                 success: true,
                 message: 'Payment verified, order stored successfully, and cart cleared.',
-                order,
             });
         } catch (error) {
             console.error('Error processing order:', error);
