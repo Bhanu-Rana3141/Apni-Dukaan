@@ -94,20 +94,19 @@
   
 /* Styles for input fields when they are in the editable state */
 .rightSide input:read-only {
-    background-color: #f0f0f0; /* Light gray background for non-editable state */
-    cursor: not-allowed; /* Cursor pointer when read-only */
+    background-color: #f0f0f0;
+    cursor: not-allowed; 
 }
   
 .rightSide input:not(:read-only) {
-    background-color: #ffffff; /* White background when editable */
-    cursor: text; /* Cursor turns into text input when editable */
-    border-color: #007bff; /* Change border color to indicate focus */
+    background-color: #ffffff; 
+    cursor: text; 
+    border-color: #007bff; 
 }
   
-  /* Add a focus effect when user clicks on the input */
 .rightSide input:focus {
     outline: none;
-    border-color: #0056b3; /* Darker blue border when focused */
+    border-color: #0056b3; 
 }
 
 .saveChangesBtn {
@@ -119,4 +118,38 @@
     outline: none;
     background-color: #E97862;
     border: 1px solid #E97862;
+}
+
+@media(max-width : 692px) {
+    .leftSide {
+        width: 35%;
+    }
+
+    .rightSide {
+        width: 60%;
+    }
+
+    .profilePart {
+        flex-direction: column;
+        position: relative;
+        right: 40px;
+    }
+
+    .rightSide p {
+        font-size: 14px;
+    }
+
+    .leftSideLinks {
+        font-size: 14px;
+    }
+
+    .profileName {
+        font-size: 14px;
+    }
+}
+
+@media(max-width : 398px) {
+    .rightSide p {
+        font-size: 12px;
+    }
 }

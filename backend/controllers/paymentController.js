@@ -32,40 +32,22 @@ exports.createOrder = async (req, res) => {
 };
 
 // Verify Razorpay signature
-// exports.verifyPayment = async (req, res) => {
-//     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+exports.verifyPayment = (req, res) => {
+    const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = req.body;
 
-//     if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
-//         return res.status(400).json({ error: 'Missing payment details' });
-//     }
+    // Generate the expected signature
+    const keySecret = process.env.RAZORPAY_KEY_SECRET;
+    const generatedSignature = crypto
+        .createHmac('sha256', keySecret)
+        .update(`${razorpayOrderId}|${razorpayPaymentId}`)
+        .digest('hex');
 
-//     try {
-//         const generated_signature = crypto
-//             .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
-//             .update(`${razorpay_order_id}|${razorpay_payment_id}`)
-//             .digest('hex');
-
-//         if (generated_signature === razorpay_signature) {
-//             // Save payment details to database
-//             const updatedOrder = await Order.findOneAndUpdate(
-//                 { _id: razorpay_order_id }, // Assuming you store order IDs in the database
-//                 {
-//                     paymentStatus: 'Paid',
-//                     transactionId: razorpay_payment_id,
-//                 },
-//                 { new: true }
-//             );
-
-//             if (!updatedOrder) {
-//                 return res.status(404).json({ error: 'Order not found' });
-//             }
-
-//             res.status(200).json({ message: 'Payment verified successfully', order: updatedOrder });
-//         } else {
-//             res.status(400).json({ error: 'Payment verification failed' });
-//         }
-//     } catch (error) {
-//         console.error('Error verifying payment:', error);
-//         res.status(500).json({ error: 'Error verifying payment' });
-//     }
-// };
+    if (generatedSignature === razorpaySignature) {
+        // Payment is verified
+        res.status(200).json({ success: true });
+        
+    } else {
+        // Payment verification failed
+        res.status(400).json({ success: false, error: 'Payment verification failed' });
+    }
+};

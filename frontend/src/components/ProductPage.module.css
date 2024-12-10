@@ -123,7 +123,11 @@ button:hover {
     color: #878787;
 }
 
-
+@media (max-width: 956px) {
+    .productImage {
+        border: none;
+    }
+}
 
 @media (max-width: 565px) {
     .productPage {
@@ -133,28 +137,30 @@ button:hover {
 
     .productImage {
         width: 60%;
+        border: none;
     }
 
     .productImage img {
         height: 250px;
     }
-
-    .btn {
-        align-items: center;
-        gap: 10px;
-    }
-
-    .btn button {
-        width: 80%;
-    }
     
     .productDetails {
         width: 100%;
     }
+}
 
+@media (max-width: 800px) {
+    .reviewsSection {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 282px) {
     .cartBtn {
-        font-size: 0.9rem;
-        width: 95%;
-        margin-left: 2px;
+        margin-left: 5px;
+    }
+    .reviewBtn {
+        margin-left: 5px;
+        margin-top: 10px;
     }
 }

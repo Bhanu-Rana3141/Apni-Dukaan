@@ -23,8 +23,6 @@ hr {
     margin-top: 67px;
     width: 100%;
     background-color: #0f111104;
-    display: flex;
-    justify-content: space-around;
 }
 
 .checkoutCart {
@@ -152,18 +150,17 @@ select {
 }
 
 @media(max-width : 928px) {
-    .cartContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .cartList {
-        width: 90%;
+        width: 80%;
+        position: relative;
+        margin-top: 15%;
     }
 
     .priceDetails {
-        width: 95%;
-        margin-bottom: 50px;
+        width: 85%;
+        margin: 50px 0 50px 12px;
+        position:static;
+        
     }
 
     .proceedButton {
@@ -171,8 +168,18 @@ select {
     }
 }
 
+@media(max-width : 394px) {
+    .cartList p {
+        font-size: 13px;
+    }
+
+    .priceDetailsHeading, .itemsPrice, .deliveryCharge, .total {
+        font-size: 13px;
+    }
+}
+
 @media(max-width : 356px) {
     .proceedButton {
-        width: 40%;
+        width: 80%;
     }
 }

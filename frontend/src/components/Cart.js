@@ -35,12 +35,12 @@ export default function Cart({ isCheckoutView }) {
 
   // Changing quantity of products
   const handleQuantityChange = async (productId, quantity) => {
-    if(quantity > 10) {
+    if (quantity > 10) {
       toast("We only accept orders for a maximum of 10 items.", {
         position: "top-center",
         style: {
-          backgroundColor: "#333", 
-          color: "#fff",           
+          backgroundColor: "#333",
+          color: "#fff",
         },
       });
       return;
@@ -94,28 +94,62 @@ export default function Cart({ isCheckoutView }) {
         },
       });
 
-      const { id: orderId, amount, currency } = response.data;
+      const {id: orderId, amount, currency } = response.data;
 
       // Step 2: Initialize Razorpay Checkout
       const options = {
         key: process.env.REACT_APP_RAZORPAY_KEY_ID,
-        amount: amount,
-        currency: currency,
+        amount,
+        currency,
         name: 'BPS Dukaan',
         description: 'Thank you for shopping with us.',
-        order_id: orderId, 
+        order_id: orderId,
         theme: {
           color: '#3399cc',
+        },
+        handler: async function (response) {
+          // Step 3: Handle payment success
+          const paymentData = {
+            razorpayOrderId: response.razorpay_order_id,
+            razorpayPaymentId: response.razorpay_payment_id,
+            razorpaySignature: response.razorpay_signature,
+          };
+          
+          try {
+            // Verify the payment on the backend
+            const verifyResponse = await axios.post('/api/payment/verify', paymentData, {
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+              },
+            });
+
+            if (verifyResponse.data.success) {
+              toast("Order placed successfully! Thank you for shopping with us.", {
+                position: "top-center",
+                style: {
+                    backgroundColor: "#333",
+                    color: "#fff",
+                },
+              });
+              navigate('/');
+            } else {
+              toast.error('Payment verification failed.');
+            }
+          } catch (error) {
+            console.error('Error during payment verification:', error);
+            toast.error('Unable to verify payment. Please contact support.');
+          }
+        },
+        modal: {
+          ondismiss: function () {
+            toast.warning('Payment process was cancelled.');
+          },
         },
       };
 
       const razorpayInstance = new window.Razorpay(options);
       razorpayInstance.open();
 
-      // If payment window is closed
-      razorpayInstance.on('payment.failed', (response) => {
-        toast.error('Payment failed. Please try again.');
-      });
     } catch (error) {
       console.error('Error during payment:', error);
       toast.error('Unable to initiate payment. Please try again later.');
@@ -199,7 +233,6 @@ export default function Cart({ isCheckoutView }) {
               </div>
 
             </div>
-
           </>
         )}
       </div>
