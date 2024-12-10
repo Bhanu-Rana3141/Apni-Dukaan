@@ -85,7 +85,7 @@ export default function Profile() {
                             <span className={styles.greeting}>Hello,</span> {authState.user.name}
                         </div>
                     </div>
-                    <Link>
+                    <Link to='/orders'>
                         <div className={styles.leftSideLinks}>My Orders</div>
                     </Link>
                     <div className={styles.leftSideLinks} onClick={handleLogout}>

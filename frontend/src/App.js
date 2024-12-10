@@ -17,6 +17,7 @@ import Products from './components/Products.js';
 import ProductPage from './components/ProductPage.js';
 import Cart from './components/Cart.js';
 import Checkout from './components/Checkout.js';
+import Orders from './components/Orders.js';
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
   const showNavbar = location.pathname !== '/checkout';
 
   // Defining routes where footer should not be displayed
-  const notShowFooter =  ['/cart', '/checkout', '/allproducts/search', '/profile'];
+  const notShowFooter =  ['/cart', '/checkout', '/allproducts/search', '/profile', '/orders'];
 
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -77,6 +78,7 @@ function App() {
         <Route path='/product/:id' element={<ProductPage/>}></Route>
         <Route path='/cart' element={<ProtectedRoute> <Cart/> </ProtectedRoute>}></Route>
         <Route path='/checkout' element={<Checkout/>}></Route>
+        <Route path='/orders' element={<Orders/>}></Route>
       </Routes>
 
       {!notShowFooter.includes(location.pathname) && <Footer/>}

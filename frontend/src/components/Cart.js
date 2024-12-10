@@ -109,6 +109,7 @@ export default function Cart({ isCheckoutView }) {
         },
         handler: async function (response) {
           // Step 3: Handle payment success
+         
           const paymentData = {
             razorpayOrderId: response.razorpay_order_id,
             razorpayPaymentId: response.razorpay_payment_id,

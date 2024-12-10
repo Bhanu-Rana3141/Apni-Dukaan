@@ -12,7 +12,6 @@ export default function Checkout() {
 
     <>
       <div className={styles.navbar}>
-        <Link to='/' className={styles.homeLink}>Back to Home</Link>
         <h2 className={styles.heading}>Checkout</h2>
       </div>
 

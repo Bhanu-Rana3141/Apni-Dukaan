@@ -4,6 +4,7 @@
 
 .emptyCart img{
     width: 250px;
+    
 }
 
 .emptyCart p {
@@ -23,6 +24,8 @@ hr {
     margin-top: 67px;
     width: 100%;
     background-color: #0f111104;
+    display: flex;
+    justify-content: space-around;
 }
 
 .checkoutCart {
