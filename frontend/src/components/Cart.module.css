@@ -153,14 +153,16 @@ select {
 }
 
 @media(max-width : 928px) {
+    .cartContainer {
+        flex-direction: column;
+    }
     .cartList {
-        width: 80%;
+        width: 90%;
         position: relative;
-        margin-top: 15%;
     }
 
     .priceDetails {
-        width: 85%;
+        width: 95%;
         margin: 50px 0 50px 12px;
         position:static;
         

@@ -20,7 +20,7 @@ export default function Login() {
 
   // toggle login to sign up form   
   const toggleLoginSignup = () => {
-    setFormType("sign up");
+    setFormType((formType == 'login' ? 'sign up' : 'login'));
   }
 
   // toggle visibility of password
@@ -181,6 +181,7 @@ export default function Login() {
                 onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <button className={styles.loginButton} onClick={handleSignup}>Sign up</button>
+            <p className={styles.dontHaveAccountPara}>Already have an account ? <span className={styles.links} onClick={toggleLoginSignup}>Login</span></p>
           </div>
         )}
       </div>

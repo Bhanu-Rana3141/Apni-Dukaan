@@ -42,7 +42,7 @@ function App() {
   const showNavbar = location.pathname !== '/checkout';
 
   // Defining routes where footer should not be displayed
-  const notShowFooter =  ['/cart', '/checkout', '/allproducts/search', '/profile', '/orders'];
+  const notShowFooter =  ['/cart', '/checkout', '/allproducts/search', '/profile', '/orders', '/login'];
 
   const [searchQuery, setSearchQuery] = useState("");
 
