@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Order.module.css'
+import styles from './Orders.module.css'
 import axios from 'axios';
 
 const Orders = () => {
