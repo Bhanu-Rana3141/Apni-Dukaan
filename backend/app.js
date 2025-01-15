@@ -3,6 +3,8 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const path = require('path');
 const app = express();
+const serverless = require('serverless-http');
+
 
 // environment variables from the .env file are loaded into process.env.
 require('dotenv').config();
@@ -42,3 +44,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+module.exports.handler = serverless(app);
