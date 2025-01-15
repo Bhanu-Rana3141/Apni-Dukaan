@@ -14,8 +14,11 @@ connectDB();
 
 // Middleware 
 app.use(express.json()); // parses request (req.body)
-app.use(cors());
-
+app.use(cors({
+    origin: 'https://apni-dukkan.vercel.app',  // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  }));
 // Serve static files
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
