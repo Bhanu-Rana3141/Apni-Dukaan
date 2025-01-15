@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import styles from './Categories.module.css';
+import axiosInstance from '../axiosInstance';
 
 export default function Categories() {
 
@@ -26,7 +26,7 @@ export default function Categories() {
      */
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('/api/categories');
+        const response = await axiosInstance.get('/api/categories');
         setCategories(response.data);
       }
       catch (error) {

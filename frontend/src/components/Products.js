@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import styles from './Products.module.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import axiosInstance from '../axiosInstance';
 
 const Products = () => {
     const { categoryName, subcategoryName } = useParams();
@@ -33,7 +33,7 @@ const Products = () => {
     */
     const fetchCategories = async () => {
         try {
-            const response = await axios.get('/api/categories');
+            const response = await axiosInstance.get('/api/categories');
             setCategories(response.data);
             const category = response.data.find(category => category.name.toLowerCase() === categoryName.toLowerCase());
             if (category) {
@@ -52,9 +52,9 @@ const Products = () => {
         try {
             let response;
             if (subcategoryName) {
-                response = await axios.get(`/api/products/category/${categoryName}/subcategory/${subcategoryName}`);
+                response = await axiosInstance.get(`/api/products/category/${categoryName}/subcategory/${subcategoryName}`);
             } else {
-                response = await axios.get(`/api/products/category/${categoryName}`);
+                response = await axiosInstance.get(`/api/products/category/${categoryName}`);
             }
             setProducts(response.data);
         } catch (error) {
@@ -73,7 +73,7 @@ const Products = () => {
         }
 
         try {
-            const response = await axios.post('/api/cart/add', {
+            const response = await axiosInstance.post('/api/cart/add', {
                 productId: product._id,
                 name: product.name,
                 description: product.description,

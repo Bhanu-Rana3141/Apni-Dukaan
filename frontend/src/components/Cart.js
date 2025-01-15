@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './Cart.module.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthContext';
 import { useContext } from 'react';
+import axiosInstance from '../axiosInstance';
 
 export default function Cart({ isCheckoutView }) {
 
@@ -20,7 +20,7 @@ export default function Cart({ isCheckoutView }) {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await axios.get('/api/cart', {
+        const response = await axiosInstance.get('/api/cart', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -46,7 +46,7 @@ export default function Cart({ isCheckoutView }) {
       return;
     }
     try {
-      await axios.put(`/api/cart/update`, {
+      await axiosInstance.put(`/api/cart/update`, {
         productId,
         quantity,
       }, {
@@ -63,7 +63,7 @@ export default function Cart({ isCheckoutView }) {
   // Removing items from cart
   const handleRemoveItem = async (productId) => {
     try {
-      await axios.delete(`/api/cart/remove`, {
+      await axiosInstance.delete(`/api/cart/remove`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -88,7 +88,7 @@ export default function Cart({ isCheckoutView }) {
     try {
       // Step 1: Create an order on the backend
       const totalAmount = calculateTotalPrice();
-      const response = await axios.post('/api/payment/order', { amount: totalAmount }, {
+      const response = await axiosInstance.post('/api/payment/order', { amount: totalAmount }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -118,7 +118,7 @@ export default function Cart({ isCheckoutView }) {
           
           try {
             // Verify the payment on the backend
-            const verifyResponse = await axios.post('/api/payment/verify', paymentData, {
+            const verifyResponse = await axiosInstance.post('/api/payment/verify', paymentData, {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
               },

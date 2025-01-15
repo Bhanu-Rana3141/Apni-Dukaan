@@ -2,9 +2,9 @@ import React, { useState, useContext } from 'react';
 import styles from './Profile.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axiosInstance from '../axiosInstance';
 
 export default function Profile() {
     const { authState, logout } = useContext(AuthContext);
@@ -45,7 +45,7 @@ export default function Profile() {
     const handleSaveChanges = async () => {
         try {
             const token = localStorage.getItem('token');
-            await axios.put(
+            await axiosInstance.put(
                 'http://localhost:5000/api/auth/update',
                 {
                     name: fields.name,

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import styles from './AllProducts.module.css';
 import { Link } from 'react-router-dom';  
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import axiosInstance from '../axiosInstance';
 
 export default function AllProducts({ searchQuery }) {
     const [products, setProducts] = useState([]);
@@ -15,7 +15,7 @@ export default function AllProducts({ searchQuery }) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('/api/products'); 
+                const response = await axiosInstance.get('/api/products'); 
                 setProducts(response.data);
                 setFilteredProducts(response.data);  
             } catch (error) {
@@ -46,7 +46,7 @@ export default function AllProducts({ searchQuery }) {
             return;
         }
         try {
-            const response = await axios.post('/api/cart/add', {
+            const response = await axiosInstance.post('/api/cart/add', {
                 productId: product._id,
                 name: product.name,
                 description: product.description,

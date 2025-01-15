@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './DeliveryAddress.module.css'
 import { toast } from 'react-toastify';
-import axios from 'axios'
+import axiosInstance from '../axiosInstance';
 
 export default function DeliveryAddress({ setSavedAddress }) {
     
@@ -21,7 +21,7 @@ export default function DeliveryAddress({ setSavedAddress }) {
         const fetchAddress = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('/api/address/getAddress', {
+                const response = await axiosInstance.get('/api/address/getAddress', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
@@ -60,7 +60,7 @@ export default function DeliveryAddress({ setSavedAddress }) {
             let response;
             if (savedAddress) {
                 // Update existing address
-                response = await axios.put(
+                response = await axiosInstance.put(
                     '/api/address/updateAddress',
                     formData,
                     {
@@ -69,7 +69,7 @@ export default function DeliveryAddress({ setSavedAddress }) {
                 );
             } else {
                 // Add new address
-                response = await axios.post(
+                response = await axiosInstance.post(
                     '/api/address/addAddress',
                     formData,
                     {

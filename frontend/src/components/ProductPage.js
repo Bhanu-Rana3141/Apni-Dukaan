@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams , useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import styles from './ProductPage.module.css';
+import axiosInstance from '../axiosInstance';
 
 const ProductPage = () => {
     const navigate = useNavigate(); 
@@ -17,10 +17,10 @@ const ProductPage = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`/api/products/${id}`); 
+                const response = await axiosInstance.get(`/api/products/${id}`); 
                 setProduct(response.data);
 
-                const reviewsResponse = await axios.get(`/api/reviews/${id}`);
+                const reviewsResponse = await axiosInstance.get(`/api/reviews/${id}`);
                 setReviews(reviewsResponse.data)
             } catch (error) {
                 console.log('Failed to fetch product:', error);
@@ -41,7 +41,7 @@ const ProductPage = () => {
         }
 
         try {
-            const response = await axios.post('/api/cart/add', {
+            const response = await axiosInstance.post('/api/cart/add', {
                 productId: product._id,
                 name: product.name,
                 description: product.description,
@@ -77,7 +77,7 @@ const ProductPage = () => {
 
         try {
             if(review.length > 0) {
-                const response = await axios.post('/api/reviews/add', {
+                const response = await axiosInstance.post('/api/reviews/add', {
                     productId: id,
                     review: review,
                 },
