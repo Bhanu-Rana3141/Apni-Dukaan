@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import axiosInstance from '../axiosInstance';
+import axios from 'axios';
 
 export default function Login() {
 
@@ -85,7 +85,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axiosInstance.post('/api/auth/login', { email, password });
+      const response = await axios.post('/api/auth/login', { email, password });
       login(response.data.token); // sending token as parameter to login function in AuthProvider
       toast.success("Login successfull!");
       navigate('/');
@@ -105,7 +105,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axiosInstance.post('/api/auth/signup', { name, email, password, phoneNumber });
+      const response = await axios.post('/api/auth/signup', { name, email, password, phoneNumber });
       login(response.data.token);
       toast.success("Registered successfully!");
       navigate('/');

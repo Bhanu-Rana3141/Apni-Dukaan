@@ -3,8 +3,6 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const path = require('path');
 const app = express();
-const serverless = require('serverless-http');
-
 
 // environment variables from the .env file are loaded into process.env.
 require('dotenv').config();
@@ -14,11 +12,8 @@ connectDB();
 
 // Middleware 
 app.use(express.json()); // parses request (req.body)
-app.use(cors({
-    origin: 'https://apni-dukkan.vercel.app',  // Replace with your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-  }));
+app.use(cors());
+
 // Serve static files
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
@@ -48,4 +43,3 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 
-module.exports.handler = serverless(app);
