@@ -13,4 +13,4 @@ Frontend: React, React Router
 Backend: Node.js, Express.js
 Database: MongoDB
 Payment Gateway: Razorpay
-Authentication: (Optional, if implemented)
+Authentication: JWT
